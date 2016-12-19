@@ -1,1 +1,1 @@
-Jo Turun muinaisina vuosina tunnettiin kyseinen hengentieteen pappien ajanvietteeksi suunniteltu peli # Mestarimieli
+Jo Turun muinaisina vuosina tunnettiin kyseinen hengentieteen devaajien ajanvietteeksi suunniteltu peli # Mestarimieli
