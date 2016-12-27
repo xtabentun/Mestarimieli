@@ -35,6 +35,8 @@ Päivä | Tunnit | Kuvaus
 27.12.2016 | 4.5h | Mainin aloittamista ja testien tekoa
 
 
-#### Luokkakaavio
+### Luokkakaavio
 
-![Ohessa karkeahko luokkakaavioluonnos](/home/lea/Documents/luokkakaavio.jpg "Luokkakaavio")
+- ![Ohessa karkeahko luokkakaavioluonnos](/home/lea/Documents/luokkakaavio.jpg)
+
+- vielä linkki jos edellinen ei näkynyt [id]: https://www.dropbox.com/s/qbbh8re7auhamcv/luokkakaavio.jpg?dl=0 "Määrittelyvaiheen luokkakaavio" 
