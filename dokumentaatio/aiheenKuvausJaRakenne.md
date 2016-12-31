@@ -33,10 +33,12 @@ Päivä | Tunnit | Kuvaus
 --------------- | ----- | ------
 19.12.2016 | 2.5h | Aiheen suunnittelua ja repon luonti
 27.12.2016 | 4.5h | Mainin aloittamista ja testien tekoa
-
+31.12.2016 | 5.0h | Toiminnallisuuksien jakamista ja muuta
 
 ### Luokkakaavio
 
 - ![Ohessa karkeahko luokkakaavioluonnos](/home/lea/Documents/luokkakaavio.jpg)
 
 - vielä linkki jos edellinen ei näkynyt [id]: https://www.dropbox.com/s/qbbh8re7auhamcv/luokkakaavio.jpg?dl=0 "Määrittelyvaiheen luokkakaavio" 
+
+- uusi luokkakaavioluonnos: https://yuml.me/028972b5 
