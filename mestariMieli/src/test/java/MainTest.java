@@ -12,7 +12,7 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertEquals;
 import mestarimieli.mestarimieli.Main;
-import static mestarimieli.mestarimieli.Main.echo;
+import mestarimieli.mestarimieli.Mestarimieli;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -35,9 +35,11 @@ public class MainTest {
     private static Main player;
     public static int guesses;
     public static int blacks;
+    public static int whites;
     public static String c;
     public static String a;
     public static String answer;
+    public static String guess;
 
     public MainTest() {
     }
@@ -135,6 +137,22 @@ public class MainTest {
         String actual = "1234";
 
         assertThat(actual, equalToIgnoringWhiteSpace(" 1234 "));
+    }
+    
+    
+    @Test 
+    public void testcheckAnswerInputLength() {
+
+        // tässä pitäisi olla boolean muotoisen checkAnswerin testausta mutta en saanut toteutettua sitä, pitäisi testata siis:
+        // sitä, jos käyttäjä antaa ylipitkän numerosarjan, niin tuloste sanoisi että kyseessä on vääränkokoinen input, anna ####
+        // pituinen lukujono.
+        
+        
+        
+    }
+
+    private void echo(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
