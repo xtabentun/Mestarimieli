@@ -13,12 +13,6 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertEquals;
 import mestarimieli.mestarimieli.Main;
 import mestarimieli.mestarimieli.Mestarimieli;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.Matchers.equalToIgnoringWhiteSpace;
-import org.hamcrest.collection.IsEmptyCollection;
-import org.hamcrest.collection.IsIterableContainingInAnyOrder;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -65,39 +59,19 @@ public class MainTest {
 
    
 
-    @Test
-    public void testUnitAnyOrder() {
-        List<String> actual = Arrays.asList("1", " 2", "3", "4", "5", "6", "7", "8", "9");
-        List<String> expected = Arrays.asList("1", " 2", "3", "4", "5", "6", "7", "8", "9");
+   
 
-        assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder("1", " 2", "3", "4", "5", "6", "7", "8", "9"));
-    }
 
-    @Test
-    public void testAssertList() {
-        List<Integer> actual = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-        assertThat(actual, is(expected));
+   @Test 
+   public void testGenerateInput() {
+       Mestarimieli n = new Mestarimieli();
+       
+       assertEquals(n.generate("1234"), "1234");
+       
+       
+   }
 
-    }
-
-    @Test
-    public void testListActualLength() {
-        List<String> actual = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
-        List<String> expected = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
-
-        assertThat(actual.size(), is(9));
-
-    }
-
-    @Test
-    public void testEmptyList() {
-        List<String> actual = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
-        List<String> expected = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
-
-        assertThat(actual, not(IsEmptyCollection.empty()));
-    }
 
     @Test
     public void testGetTotalCharacter() {
@@ -120,33 +94,11 @@ public class MainTest {
         }
     }
 
-    @Test
-    public void testSecretAnswerContainsString() {
-        String expected = "1234";
-        String actual = "1234";
-        assertThat(actual, is(equalTo(expected)));
 
-    }
 
-    @Test
-    public void testIgnoringWhitespace() throws Exception {
-        String expected = "1234";
-        String actual = "1234";
-
-        assertThat(actual, equalToIgnoringWhiteSpace(" 1234 "));
-    }
     
     
-    @Test 
-    public void testcheckAnswerInputLength() {
-
-        // tässä pitäisi olla boolean muotoisen checkAnswerin testausta mutta en saanut toteutettua sitä, pitäisi testata siis:
-        // sitä, jos käyttäjä antaa ylipitkän numerosarjan, niin tuloste sanoisi että kyseessä on vääränkokoinen input, anna ####
-        // pituinen lukujono.
-        
-        
-        
-    }
+  
     
     
 
