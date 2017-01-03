@@ -40,6 +40,7 @@ public class MainTest {
     public static String a;
     public static String answer;
     public static String guess;
+    
 
     public MainTest() {
     }
@@ -146,6 +147,9 @@ public class MainTest {
         
         
     }
+    
+    
+
 
     private void echo(String text) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
