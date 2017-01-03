@@ -62,11 +62,7 @@ public class MainTest {
     public void tearDown() {
     }
 
-    @Test
-    public void testEchoEmptyString() {
-        String text = " ";
-        echo(text);
-    }
+   
 
     @Test
     public void testUnitAnyOrder() {

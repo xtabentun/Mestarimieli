@@ -42,3 +42,12 @@ Päivä | Tunnit | Kuvaus
 - vielä linkki jos edellinen ei näkynyt [id]: https://www.dropbox.com/s/qbbh8re7auhamcv/luokkakaavio.jpg?dl=0 "Määrittelyvaiheen luokkakaavio" 
 
 - uusi luokkakaavioluonnos: https://yuml.me/028972b5 
+
+![Alt text](https://yuml.me/8eddebc0)
+
+![Alt text][id]
+
+[id]: https://yuml.me/8eddebc0 Luokkakaavio
+
+
+- lorem ipsum
