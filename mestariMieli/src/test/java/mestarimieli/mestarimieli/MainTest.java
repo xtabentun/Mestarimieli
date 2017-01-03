@@ -1,3 +1,7 @@
+package mestarimieli.mestarimieli;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,7 +15,6 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertEquals;
-import mestarimieli.mestarimieli.Main;
 import mestarimieli.mestarimieli.Mestarimieli;
 import org.junit.After;
 import org.junit.AfterClass;
