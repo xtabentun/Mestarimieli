@@ -34,7 +34,7 @@ Päivä | Tunnit | Kuvaus
 27.12.2016 | 4.5h | Mainin aloittamista ja testien tekoa
 31.12.2016 | 5.0h | Toiminnallisuuksien jakamista ja muuta
 03.01.2017 | 9.0h | Testien korjausta, metodien muokkausta ja pomin korjausta
-04.01.2017 | 3.0H | Javadocien lisäys, raporttien lisäys, luokkakaavion korjaus, GUIn hahmottelua
+04.01.2017 | 3.0H | Javadocien lisäys, raporttien lisäys, luokkakaavion korjaus, GUIn hahmottelua ja aloitusta
 ### Luokkakaavio 
 
 ![Alt text](https://yuml.me/7156d228)
