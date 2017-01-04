@@ -37,6 +37,6 @@ Päivä | Tunnit | Kuvaus
 04.01.2017 | 3.0H | Javadocien lisäys, raporttien lisäys, luokkakaavion korjaus, GUIn hahmottelua ja aloitusta
 ### Luokkakaavio 
 
-![Alt text](https://yuml.me/7156d228)
+![Alt text](https://yuml.me/34002b71)
 
 
