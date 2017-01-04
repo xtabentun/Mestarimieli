@@ -34,20 +34,10 @@ Päivä | Tunnit | Kuvaus
 19.12.2016 | 2.5h | Aiheen suunnittelua ja repon luonti
 27.12.2016 | 4.5h | Mainin aloittamista ja testien tekoa
 31.12.2016 | 5.0h | Toiminnallisuuksien jakamista ja muuta
-
-### Luokkakaavio
-
-- ![Ohessa karkeahko luokkakaavioluonnos](/home/lea/Documents/luokkakaavio.jpg)
-
-- vielä linkki jos edellinen ei näkynyt [id]: https://www.dropbox.com/s/qbbh8re7auhamcv/luokkakaavio.jpg?dl=0 "Määrittelyvaiheen luokkakaavio" 
-
-- uusi luokkakaavioluonnos: https://yuml.me/028972b5 
+03.01.2017 | 9.0h | Testien korjausta, metodien muokkausta ja pomin korjausta
+04.01.2017 | 3.0H | Javadocien lisäys, raporttien lisäys, luokkakaavion korjaus
+### Luokkakaavio 
 
 ![Alt text](https://yuml.me/8eddebc0)
 
-![Alt text][id]
 
-[id]: https://yuml.me/8eddebc0 Luokkakaavio
-
-
-- lorem ipsum
