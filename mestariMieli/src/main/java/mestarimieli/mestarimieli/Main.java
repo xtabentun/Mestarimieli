@@ -18,7 +18,7 @@ import mestarimieli.mestarimieli.Mestarimieli;
 nelikirjaimisen jonon, joka muodostuu numeroista 123456789, 0 ei ole käytössä. Koodipalloja ovat tässä siis numerot 1-9 ja avainpalloja mustat ja valkoiset: e.g. blacks ja whites. 
 
  */
-/**
+/** Luokka mahdollistaa Mestarimieli-luokan toiminnan run metodin kautta.
  *
  * @author lzkosone
  */
