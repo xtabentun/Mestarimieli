@@ -11,6 +11,7 @@ package mestarimieli.mestarimieli;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,13 +32,16 @@ public class Mestarimieli {
 
         int guesses = 0;
         String guess;
-
+        String retval;
+        
         while (true) {
             guesses++;
             echo(answer + "Type number: ");
             guess = input.readLine();
 
-            checkAnswer(guesses, guess);
+            retval = checkAnswer(guesses, guess);
+            echo(retval);
+            if("You win teh game!".equals(retval)) exit(0);
         }
     }
 
@@ -50,7 +54,7 @@ public class Mestarimieli {
      * @param guess
      * @return
      */
-    public boolean checkAnswer(int guesses, String guess) {
+    public String checkAnswer(int guesses, String guess) {
 
         int blacks = 0, whites = 0;
 
@@ -64,15 +68,14 @@ public class Mestarimieli {
             }
 
             if (blacks == 4) {
-                return true;
+                return "You win teh game!";
             } else {
-
-                echo("Blacks " + blacks + " Whites " + whites + "\n");
+                return ("Blacks " + blacks + " Whites " + whites + "\n");
             }
 //            echo("Bulls "+  bulls + " Cows " + cows + "\n");
 
         }
-        return false;
+        return "Wrong length\n";
 
     }
 
