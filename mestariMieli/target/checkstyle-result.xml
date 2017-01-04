@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Main.java">
+</file>
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Mestarimieli.java">
+</file>
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/ui/ui.java">
+<error line="12" column="14" severity="error" message="Name &apos;ui&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
+</file>
+</checkstyle>
