@@ -27,7 +27,6 @@ Käytännössä tulevaa peliä kuvaavat seuraavat suuntaviivat:
 
 
 
-
 ### Tuntikirjanpito
 Päivä | Tunnit | Kuvaus
 --------------- | ----- | ------
@@ -38,6 +37,6 @@ Päivä | Tunnit | Kuvaus
 04.01.2017 | 3.0H | Javadocien lisäys, raporttien lisäys, luokkakaavion korjaus
 ### Luokkakaavio 
 
-![Alt text](https://yuml.me/8eddebc0)
+![Alt text](https://yuml.me/7156d228)
 
 
