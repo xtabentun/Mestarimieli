@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/GUI/GUI.java">
+<error line="6" column="9" severity="error" message="Name &apos;GUI&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="33" column="70" severity="error" message="&apos;;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"/>
+</file>
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Main.java">
+</file>
+<file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Mestarimieli.java">
+<error line="44" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="44" column="15" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+</checkstyle>

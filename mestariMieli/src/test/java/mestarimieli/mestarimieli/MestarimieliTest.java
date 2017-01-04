@@ -46,7 +46,7 @@ public class MestarimieliTest {
     public void testCheckAnswerInput() {
        Mestarimieli n = new Mestarimieli();
        
-       assertTrue((n.checkAnswer(5, "12312")).equals("wrong length"));
+       assertTrue((n.checkAnswer(6, "123456")).equals("Wrong length\n"));
     }
     
     
