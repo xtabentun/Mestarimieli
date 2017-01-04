@@ -34,6 +34,13 @@ public class Mestarimieli {
         }
     }
 
+    /**
+     * hipster ipsum craftbeer chillwave checkAnswer in da hauzz
+     *
+     * @param guesses
+     * @param guess
+     * @return
+     */
     public boolean checkAnswer(int guesses, String guess) {
 
         int blacks = 0, whites = 0;
@@ -50,14 +57,14 @@ public class Mestarimieli {
             if (blacks == 4) {
                 return true;
             } else {
-                
+
                 echo("Blacks " + blacks + " Whites " + whites + "\n");
             }
 //            echo("Bulls "+  bulls + " Cows " + cows + "\n");
 
-        } 
-            return false;
-        
+        }
+        return false;
+
     }
 
     public void echo(String text) {
