@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package gui;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -30,7 +30,7 @@ public class GUI implements Runnable {
         frame = new JFrame("Mestarimieli-peli");
         frame.setPreferredSize(new Dimension(200, 100));
         
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE) ;
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
         luoKomponentit(frame.getContentPane());
         

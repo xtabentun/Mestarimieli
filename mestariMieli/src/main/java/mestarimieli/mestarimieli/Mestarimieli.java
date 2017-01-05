@@ -3,10 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-
-
 package mestarimieli.mestarimieli;
 
 import java.io.BufferedReader;
@@ -15,13 +11,15 @@ import static java.lang.System.exit;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Luokan metodit tuottavat pelin salatun, nelinumeroisen lukuarvon jota käyttäjä arvaa syötteellään. 
- * Luokan metodit arvioivat sen jälkeen kuinka osuva syöte on, tuottaen valkoisten ja mustien lukumäärät käyttäjälle.
- * Kun käyttäjä arvaa täsmälleen oikean lukuarvon, luokan metodit kertovat myös sen käyttäjälle.
- * 
+/**
+ * Luokan metodit tuottavat pelin salatun, nelinumeroisen lukuarvon jota
+ * käyttäjä arvaa syötteellään. Luokan metodit arvioivat sen jälkeen kuinka
+ * osuva syöte on, tuottaen valkoisten ja mustien lukumäärät käyttäjälle. Kun
+ * käyttäjä arvaa täsmälleen oikean lukuarvon, luokan metodit kertovat myös sen
+ * käyttäjälle.
+ *
  * @author lea
  */
-
 public class Mestarimieli {
 
     String answer;
@@ -33,7 +31,7 @@ public class Mestarimieli {
         int guesses = 0;
         String guess;
         String retval;
-        
+
         while (true) {
             guesses++;
             echo(answer + "Type number: ");
@@ -41,14 +39,17 @@ public class Mestarimieli {
 
             retval = checkAnswer(guesses, guess);
             echo(retval);
-            if("You win teh game!".equals(retval)) exit(0);
+            if ("You win teh game!".equals(retval)) {
+                exit(0);
+            }
         }
     }
 
     /**
-     * checkAnswer metodi ottaa parametreikseen guesses'n ja guess'n.
-     * Metodi siis katsoo käyttäjän syöttämän veikkauksen numeroita ja lisää sen mukaan mustan jos oikea numero sijaitsee oikealla paikalla
-     * ja valkoisen, jos oikea numero sijaitsee väärällä paikalla .
+     * checkAnswer metodi ottaa parametreikseen guesses'n ja guess'n. Metodi
+     * siis katsoo käyttäjän syöttämän veikkauksen numeroita ja lisää sen mukaan
+     * mustan jos oikea numero sijaitsee oikealla paikalla ja valkoisen, jos
+     * oikea numero sijaitsee väärällä paikalla .
      *
      * @param guesses
      * @param guess
@@ -79,23 +80,21 @@ public class Mestarimieli {
 
     }
 
-    /** Metodi ottaa parametrikseen Stringin ja printtaa saman.
-     * 
-     * @param text 
+    /**
+     * Metodi ottaa parametrikseen Stringin ja printtaa saman.
+     *
+     * @param text
      */
- 
-    
     public void echo(String text) {
         System.out.print(text);
     }
-    
-    /** Metodi kasvattaa vastausta nelinumeroiseksi asti ja palauttaa toStringin.
-     * 
-     * @param sh
-     * @return 
-     */
-    
 
+    /**
+     * Metodi kasvattaa vastausta nelinumeroiseksi asti ja palauttaa toStringin.
+     *
+     * @param sh
+     * @return
+     */
     public String generate(String sh) {
         StringBuilder answ = new StringBuilder();
         for (int i = 0; i <= 3; i++) {
@@ -104,13 +103,14 @@ public class Mestarimieli {
         return answ.toString();
 
     }
-    
-    /** Metodi tuottaa salatun lukuarvon, satunnaisen listan numeroista, siinä ei kuitenkaan toistu sama numero kahteen kertaan. 
-     * 
-     * @param input
-     * @return 
-     */
 
+    /**
+     * Metodi tuottaa salatun lukuarvon, satunnaisen listan numeroista, siinä ei
+     * kuitenkaan toistu sama numero kahteen kertaan.
+     *
+     * @param input
+     * @return
+     */
     public String shuffle(String input) {
         List<Character> characters = new ArrayList<Character>();
         for (char c : input.toCharArray()) {
