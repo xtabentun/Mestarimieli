@@ -58,21 +58,7 @@ public class MestarimieliTest {
 
     }
 
-    @Test
-    public void testIfEquality() throws Exception {
-        String guess = "1234";
-        String answer = "1234";
-        int i=0;
-       
-       if (guess.charAt(i) == answer.charAt(i)) {
-//        assertTrue(guess.equals(answer));
-//        assertFalse(guess == answer);
-        Assert.assertEquals(guess, answer);
-        
-       
-        
-    } 
-    }     
+      
 //    public class StringEqualityTest extends TestCase {
 //    public void testEquality() throws Exception {
 //        String a = "abcde";
