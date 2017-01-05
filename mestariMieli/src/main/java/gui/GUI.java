@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
 
-/**
+/** Graafinen käyttöliittymä joka luo uuden ikkunan peliä varten.
  *
  * @author lzkosone
  */
@@ -19,10 +19,13 @@ public class GUI implements Runnable {
 
     private JFrame frame;
     
+/** Luokka luo framen pelille.
+ *
+ */
+    
     public GUI()  {
         
     }
-    
     
     
     @Override

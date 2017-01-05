@@ -53,9 +53,9 @@ public class Mestarimieli {
      * mustan jos oikea numero sijaitsee oikealla paikalla ja valkoisen, jos
      * oikea numero sijaitsee väärällä paikalla .
      *
-     * @param guesses
-     * @param guess
-     * @return
+     * @param guesses int muotoinen parametri
+     * @param guess String muotoinen parametri 
+     * @return Palauttaa lukijalle viestin hänen arvatessaan koodin oikein tai ilmoittaa väärästä pituudesta mikäli antaa väärän pituisen merkkijonon.
      */
     public String checkAnswer(int guesses, String guess) {
 
@@ -85,7 +85,7 @@ public class Mestarimieli {
     /**
      * Metodi ottaa parametrikseen Stringin ja printtaa saman.
      *
-     * @param text
+     * @param text String muotoinen parametri echo-metodille, joka printtaa kyseisen parametrin.
      */
     public void echo(String text) {
         System.out.print(text);
@@ -94,8 +94,8 @@ public class Mestarimieli {
     /**
      * Metodi kasvattaa vastausta nelinumeroiseksi asti ja palauttaa toStringin.
      *
-     * @param sh
-     * @return
+     * @param sh parametri, jota käytetään hyödyksi luotaessa answ-nimistä StringBuilderia.
+     * @return palauttaa toStringinä answ-StringBuilderin.
      */
     public String generate(String sh) {
         StringBuilder answ = new StringBuilder();
@@ -110,8 +110,8 @@ public class Mestarimieli {
      * Metodi tuottaa salatun lukuarvon, satunnaisen listan numeroista, siinä ei
      * kuitenkaan toistu sama numero kahteen kertaan.
      *
-     * @param input
-     * @return
+     * @param input parametria käytetään characters nimisen listan luontiin.
+     * @return Palauttaa outputin toStringninä.
      */
     public String shuffle(String input) {
         List<Character> characters = new ArrayList<Character>();

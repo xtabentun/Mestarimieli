@@ -25,6 +25,13 @@ nelikirjaimisen jonon, joka muodostuu numeroista 123456789, 0 ei ole käytössä
  * @author lzkosone
  */
 public class Main {
+    
+    /** metodi luo uuden m-nimisen Mestarimielen, jonka metodi pistää "pyörimään".
+     * 
+     * @param args tyypillinen String muotoinen parametri kyseiselle staattiselle metodille.
+     * @throws Exception Mahdollistaa toiminnan.
+     */
+    
     public static void main(String[] args) throws Exception {
         GUI g = new GUI();
         SwingUtilities.invokeLater(g);
