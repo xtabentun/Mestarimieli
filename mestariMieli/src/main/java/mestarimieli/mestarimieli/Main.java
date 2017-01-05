@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.main;
+package mestarimieli.mestarimieli;
 
 import gui.GUI;
 import java.io.BufferedReader;
