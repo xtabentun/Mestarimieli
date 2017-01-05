@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.mestarimieli;
+package mestarimieli.main;
 
 import gui.GUI;
 import java.io.BufferedReader;
@@ -15,6 +15,7 @@ import java.util.Random;
 import java.util.Scanner;
 import mestarimieli.mestarimieli.Mestarimieli;
 import javax.swing.SwingUtilities;
+import mestarimieli.mestarimieli.Mestarimieli;
 
 /*Mestarimieli-peli, jonka toteutus toimii numeropohjaisena: käyttäjä arvaa
 nelikirjaimisen jonon, joka muodostuu numeroista 123456789, 0 ei ole käytössä. Koodipalloja ovat tässä siis numerot 1-9 ja avainpalloja mustat ja valkoiset: e.g. blacks ja whites. 

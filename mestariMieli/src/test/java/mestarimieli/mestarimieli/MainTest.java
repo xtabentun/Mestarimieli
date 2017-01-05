@@ -8,6 +8,7 @@ package mestarimieli.mestarimieli;
  * and open the template in the editor.
  */
 
+import mestarimieli.main.Main;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
