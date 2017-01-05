@@ -20,4 +20,12 @@
         </goals>
     </action>
     
+     <action>
+        <actionName>CUSTOM-Javadoc</actionName>
+        <displayName>Javadoc</displayName>
+        <goals>
+            <goal>javadoc:javadoc</goal>
+        </goals>
+    </action>
+    
 </actions>

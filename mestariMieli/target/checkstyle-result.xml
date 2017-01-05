@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.11.2">
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Main.java">
+<error line="28" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/mestarimieli/Mestarimieli.java">
+<error line="28" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="60" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="60" column="35" severity="error" message="Expected @param tag for &apos;guesses&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="60" column="51" severity="error" message="Expected @param tag for &apos;guess&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="90" column="29" severity="error" message="Expected @param tag for &apos;text&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="100" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="100" column="35" severity="error" message="Expected @param tag for &apos;sh&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="116" severity="error" message="Expected an @return tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="116" column="34" severity="error" message="Expected @param tag for &apos;input&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/gui/GUI.java">
+<error line="14" severity="error" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="22" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 </checkstyle>

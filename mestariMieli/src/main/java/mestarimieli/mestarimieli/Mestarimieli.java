@@ -45,6 +45,8 @@ public class Mestarimieli {
         }
     }
 
+    
+    
     /**
      * checkAnswer metodi ottaa parametreikseen guesses'n ja guess'n. Metodi
      * siis katsoo käyttäjän syöttämän veikkauksen numeroita ja lisää sen mukaan
