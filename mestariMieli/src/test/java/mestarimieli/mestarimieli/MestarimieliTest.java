@@ -8,7 +8,7 @@ package mestarimieli.mestarimieli;
  * and open the template in the editor.
  */
 
-import mestarimieli.mestarimieli.Mestarimieli;
+import logiikka.Mestarimieli;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -22,11 +22,16 @@ import static org.junit.Assert.*;
  */
 public class MestarimieliTest {
     
+      Mestarimieli m = new Mestarimieli();
+      int vastaus = 
+    
     public MestarimieliTest() {
     }
     
     @BeforeClass
     public static void setUpClass() {
+        
+        
     }
     
     @AfterClass
@@ -47,6 +52,17 @@ public class MestarimieliTest {
        Mestarimieli n = new Mestarimieli();
        
        assertTrue((n.checkAnswer(6, "123456")).equals("Wrong length\n"));
+    }
+    
+    @Test
+    public void testCheckFalse() {
+        
+        String a;
+        String b;
+        
+        
+       assertFalse((m.checkAnswer(3, "123")).equals("Wrong length\n"));
+       
     }
     
     

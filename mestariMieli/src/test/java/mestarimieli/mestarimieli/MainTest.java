@@ -15,7 +15,7 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertEquals;
-import mestarimieli.mestarimieli.Mestarimieli;
+import logiikka.Mestarimieli;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

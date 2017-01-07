@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import mestarimieli.mestarimieli.Mestarimieli;
+import ui.UI;
 import javax.swing.SwingUtilities;
 
 /*Mestarimieli-peli, jonka toteutus toimii numeropohjaisena: käyttäjä arvaa
@@ -36,7 +36,7 @@ public class Main {
         GUI g = new GUI();
         SwingUtilities.invokeLater(g);
    
-        Mestarimieli m = new Mestarimieli();
+        UI m = new UI();
         m.run(); 
     }
 }
