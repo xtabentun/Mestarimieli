@@ -40,10 +40,10 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>mestarimieli.mestarimieli.*</param>
+                        <param>mestarimieli.logiikka.*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>mestarimieli.mestarimieli.*</param>
+                        <param>mestarimieli.logiikka.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

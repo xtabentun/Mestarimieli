@@ -6,32 +6,37 @@
 package logiikka;
 
 import java.util.ArrayList;
+import static java.util.Collections.list;
 import java.util.List;
-
 
 /**
  *
  * @author lea
  */
 public class Number {
+
+    private String answer;
+    private int answerLength;
+
+    public Number(int answerLength) {
+        this.answerLength = answerLength;
+        answer = generate(this.answerLength, shuffle("123456789"));
     
-     private String answer;
-    
-    public Number() {
-         answer = generate(shuffle("123456789"));
+
+
     }
-    
+
     public String getAnswer() {
         return this.answer;
     }
-    
+
     public void setAnswer(String num) {
         this.answer = num;
     }
 
-    private String generate(String sh) {
+    private String generate(int answerLength, String sh) {
         StringBuilder answ = new StringBuilder();
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= answerLength-1; i++) {
             answ.append(sh.charAt(i));
         }
         return answ.toString();
@@ -52,12 +57,11 @@ public class Number {
 
     }
 
-    public String checkAnswer(String guess) {
-
+    public int[]  checkAnswer(String guess) {
         int blacks = 0, whites = 0;
 
-        if (guess.length() == 4) {
-            for (int i = 0; i <= 3; i++) {
+        if (guess.length() == answerLength) {
+            for (int i = 0; i <= answerLength-1; i++) {
                 if (guess.charAt(i) == answer.charAt(i)) {
                     blacks++;
                 } else if (answer.contains(guess.charAt(i) + "")) {
@@ -65,16 +69,10 @@ public class Number {
                 }
             }
 
-            if (blacks == 4) {
-                return "You win teh game!";
-            } else {
-                return ("Blacks " + blacks + " Whites " + whites + "\n");
-            }
-//            echo("Bulls "+  bulls + " Cows " + cows + "\n");
-
         }
-        return "Wrong length\n";
-
+            return new int[] { blacks, whites};
+            
     }
 
 }
+

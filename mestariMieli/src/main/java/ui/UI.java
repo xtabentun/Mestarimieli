@@ -15,35 +15,52 @@ import logiikka.Number;
  * @author lea
  */
 public class UI {
-    
-     public void echo(String text) {
+
+    public void echo(String text) {
         System.out.print(text);
     }
-     
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+    BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     int guesses = 0;
 
     public void run() throws Exception {
-        
-        Number number = new Number() {};
-        
-        String answer = number.getAnswer();
 
+        echo("How long will be your quest? ");
+        String x =  input.readLine();
+        int answerLength = Integer.parseInt(x);
+        
+        Number number = new Number(answerLength) {
+        };
+
+        String answer = number.getAnswer();
         String guess;
-        String retval;
+        int[] retval;
 
         while (true) {
             guesses++;
             echo(answer + "Type number: ");
-            echo( guesses + ": ");
+            echo(guesses + ": ");
             guess = input.readLine();
 
-            retval = number.checkAnswer( guess);
-            echo(retval);
-            if ("You win teh game!".equals(retval)) {
-                exit(0);
+            if ( answerLength != guess.length()) {
+                echo("Wrong length\n");
+                continue;
+            } 
+
+            retval = number.checkAnswer(guess);
+            int blacks = retval[0];
+            int whites = retval[1];
+            echo("Blacks " + blacks + " Whites " + whites + "\n");
+            if (blacks == answerLength) {
+                echo("You win teh game!");
+                return;
+            } else {
+                echo("Blacks " + blacks + " Whites " + whites + "\n");
             }
+//            echo("Bulls "+  bulls + " Cows " + cows + "\n");
+
         }
+
     }
-    
+
 }
