@@ -58,6 +58,7 @@ public class Number {
     }
 
     public int[]  checkAnswer(String guess) {
+        
         int blacks = 0, whites = 0;
 
         if (guess.length() == answerLength) {

@@ -49,6 +49,10 @@ public void testConstructor() {
    Assert.assertNotEquals(n.getAnswer().length(), 3);
 }
     
-    
+    @Test
+    public void testCheckAnswer1() {
+        int [] vittu = {4, 0};
+        Assert.assertArrayEquals(n.checkAnswer("1234"), vittu);
+    }
     
 }
