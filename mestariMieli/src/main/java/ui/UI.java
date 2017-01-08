@@ -69,7 +69,8 @@ public class UI {
                 if (!cont.equals("y")) {
                     echo("Not an answer!"); 
                     continue;
-                } else { won = false;}
+                } else { 
+                    won = false;}
             }
             player.guessesGrow();
             echo(answer + "Type number: ");

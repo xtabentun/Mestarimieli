@@ -10,57 +10,59 @@ import java.util.List;
 
 /**
  * Luokka huolehtii pelaajan nimestä ja ArrayList muotoisesta arvauslistasta.
+ *
  * @author lea
  */
 public class Player {
 
     private final String name;
-    private int guesses ;
+    private int guesses;
     private final List<String> guessList = new ArrayList();
-    
+
     private final List<int[]> guessCheckList = new ArrayList();
 
-    
     /**
      * Metodi vain palauttaa.
+     *
      * @return Palauttaa guessCheckList-nimisen ArrayList listan.
      */
-    
     public List<int[]> getGuessCheckList() {
         return guessCheckList;
     }
-    
-/** 
- * Metodi huolehtii käyttäjän nimestä ja arvausten lukumäärä on määritelty myös täällä.
- * @param name String muotoinen muuttuja, käyttäjän nimi.
- */
-    
+
+    /**
+     * Metodi huolehtii käyttäjän nimestä ja arvausten lukumäärä on määritelty
+     * myös täällä.
+     *
+     * @param name String muotoinen muuttuja, käyttäjän nimi.
+     */
     public Player(String name) {
-        this.name = name;
+        this.name=name;
         guesses=0;
     }
-    
+
     /**
      * Metodi lisää arvauksen listaan.
+     *
      * @param guess Arvausten määrä.
      */
-
     public void updateGuessList(String guess) {
-        guessList.add(guess);       
+        guessList.add(guess);
     }
-    
+
     /**
-     *  Metodi, joka on hyödyksi GUIta luodessa.
+     * Metodi, joka on hyödyksi GUIta luodessa.
+     *
      * @param guessCheck parametri on taulukko, joka lisätään listaan.
      */
-    
-    public void updateGuessCheckList(int [] guessCheck) {
+    public void updateGuessCheckList(int[] guessCheck) {
         guessCheckList.add(guessCheck);
     }
     
-      public List<String> getGuessList() {
+    public List<String> getGuessList() {
         return guessList;
     }
+
     public int getGuesses() {
         return guesses;
     }
@@ -69,13 +71,11 @@ public class Player {
 //        this.guesses = guesses;
 //        
 //    }
-    
     /**
      * Metodi kasvattaa arvausten määrää yhdellä.
      */
-    
     public void guessesGrow() {
-       guesses+=1;
+        guesses+=1;
     }
 
     public String getName() {
@@ -85,5 +85,4 @@ public class Player {
 //    public void setName(String name) {
 //        this.name = name;
 //    }
-
 }
