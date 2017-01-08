@@ -11,12 +11,17 @@ import static java.lang.System.exit;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
-/**
- *
+/** 
+ * Luokka huolehtii ohjelman perusrungosta, kuten käyttäjän syöttämien syötteiden tyypistä ja pituudesta.
  * @author lea
  */
 public class UI {
 
+    /**
+     *  Metodi ottaa parametrikseen text nimisen Stringin ja printtaa sen.
+     * @param text String muotoinen parametri metodille.
+     */
+    
     public void echo(String text) {
         System.out.print(text);
     }
@@ -24,6 +29,16 @@ public class UI {
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     private boolean won = false;
 
+    /**
+     * 
+     *Metodi kysyy pelaajalta kuka tämä on, luo pelaajan, kysyy koodin pituutta, luo ratkaistavan koodin.
+     * Koodin mennessä oikein, ilmoittaa arvauksien määrän myös ja kysyy, haluaako tämä jatkaa vai ei. 
+     * Ilmoittaa myös väärästä pituudesta.
+     * 
+     * 
+     * @throws Exception jotta kaikki toimisi kuten pitää.
+     */
+    
     public void run() throws Exception {
 
         echo("Who are you? ");
@@ -40,6 +55,7 @@ public class UI {
 
         String answer = number.getAnswer();
         String guess;
+        
         int[] retval;
 
         while (true) {
@@ -59,6 +75,8 @@ public class UI {
             echo(answer + "Type number: ");
 
             guess = input.readLine();
+            
+            player.updateGuessList(guess);
 
             if (!number.checkGuessLength(guess)) {
                 echo("Wrong length\n");
@@ -66,6 +84,7 @@ public class UI {
             }
 
             retval = number.checkGuess(guess);
+            player.updateGuessCheckList(retval);
             int blacks = retval[0];
             int whites = retval[1];
 //            echo("Blacks " + blacks + " Whites " + whites + "\n");
