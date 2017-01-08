@@ -47,4 +47,4 @@ Päivä | Tunnit | Kuvaus
 
 ![Alt text](SequenceDiagram669.png)
 
-!Alt text](SequenceDiagram670.png)
+![Alt text](SequenceDiagram670.png)
