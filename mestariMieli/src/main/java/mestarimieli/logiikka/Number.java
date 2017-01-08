@@ -6,7 +6,6 @@
 package mestarimieli.logiikka;
 
 import java.util.ArrayList;
-import static java.util.Collections.list;
 import java.util.List;
 
 /**
@@ -16,7 +15,7 @@ import java.util.List;
 public class Number {
 
     private String answer;
-    private int answerLength;
+    private final int answerLength;
 
     public Number(int answerLength) {
         this.answerLength = answerLength;
@@ -42,12 +41,12 @@ public class Number {
     }
 
     private String shuffle(String input) {
-        List<Character> characters = new ArrayList<Character>();
+        List<Character> characters = new ArrayList<>();
         for (char c : input.toCharArray()) {
             characters.add(c);
         }
         StringBuilder output = new StringBuilder(input.length());
-        while (characters.size() != 0) {
+        while (!characters.isEmpty()) {
             int randPicker = (int) (Math.random() * characters.size());
             output.append(characters.remove(randPicker));
         }
@@ -55,7 +54,7 @@ public class Number {
 
     }
 
-    public int[] checkAnswer(String guess) {
+    public int[] checkGuess(String guess) {
         int blacks = 0, whites = 0;
 
         for (int i = 0; i <= answerLength - 1; i++) {
@@ -68,11 +67,8 @@ public class Number {
         return new int[]{blacks, whites};
     }
 
-    public boolean guessLength(String guess) {
-        if (guess.length() == answerLength) {
-            return true;
-        }
-        return false;
+    public boolean checkGuessLength(String guess) {
+        return guess.length() == answerLength;
     }
 
 }

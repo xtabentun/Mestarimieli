@@ -51,7 +51,7 @@ public class UI {
                     exit(0);
                 }
                 if (!cont.equals("y")) {
-                    echo("Not an answer!");
+                    echo("Not an answer!"); 
                     continue;
                 } else { won = false;}
             }
@@ -60,19 +60,19 @@ public class UI {
 
             guess = input.readLine();
 
-            if (!number.guessLength(guess)) {
+            if (!number.checkGuessLength(guess)) {
                 echo("Wrong length\n");
                 continue;
             }
 
-            retval = number.checkAnswer(guess);
+            retval = number.checkGuess(guess);
             int blacks = retval[0];
             int whites = retval[1];
 //            echo("Blacks " + blacks + " Whites " + whites + "\n");
             if (blacks == answerLength) {
                 echo("You win teh game! Number of guesses " + player.getGuesses());
                 won = true;
-                continue;
+//                continue;
             } else {
                 echo("Blacks " + blacks + " Whites " + whites + "\n");
             }

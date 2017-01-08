@@ -39,4 +39,4 @@ Päivä | Tunnit | Kuvaus
 
 ![Alt text](https://yuml.me/34002b71)
 
-
+![Alt text](/home/lea/Downloads/SequenceDiagram670.png)

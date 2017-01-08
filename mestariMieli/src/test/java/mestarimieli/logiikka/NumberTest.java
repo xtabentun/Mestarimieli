@@ -45,31 +45,31 @@ public class NumberTest {
     @Test
     public void testCheckAnswer1() {
         int[] eka = {4, 0};
-        Assert.assertArrayEquals(n.checkAnswer("1234"), eka);
+        Assert.assertArrayEquals(n.checkGuess("1234"), eka);
     }
 
     @Test
     public void testCheckAnswer2() {
         int[] toka = {2, 2};
-        Assert.assertArrayEquals(n.checkAnswer("2134"), toka);
+        Assert.assertArrayEquals(n.checkGuess("2134"), toka);
     }
 
     @Test
     public void testCheckAnswer3() {
         int[] kolmas = {0, 4};
-        Assert.assertArrayEquals(n.checkAnswer("4321"), kolmas);
+        Assert.assertArrayEquals(n.checkGuess("4321"), kolmas);
     }
 
     @Test
     public void testCheckAnswer4() {
         int[] neljas = {1, 3};
-        Assert.assertArrayEquals(n.checkAnswer("1423"), neljas);
+        Assert.assertArrayEquals(n.checkGuess("1423"), neljas);
     }
 
     @Test
     public void testGuessLengthRight() {
         String guess = "6789";
-        Assert.assertTrue(n.guessLength(guess));
+        Assert.assertTrue(n.checkGuessLength(guess));
     }
 
     @Test
@@ -77,8 +77,8 @@ public class NumberTest {
         String guess1 = "23";
         String guess2 = "123456";
 
-        Assert.assertFalse(n.guessLength(guess1));
-        Assert.assertFalse(n.guessLength(guess2));
+        Assert.assertFalse(n.checkGuessLength(guess1));
+        Assert.assertFalse(n.checkGuessLength(guess2));
     }
 
 //    @Test
