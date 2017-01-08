@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Luokka toteuttaa pelin oikean koodin generoinnin ja tarkistaa, onko käyttäjän
+ * antama arvaus sama kuin oikea koodi.
  *
  * @author lea
  */
@@ -17,6 +19,11 @@ public class Number {
     private String answer;
     private final int answerLength;
 
+    /**
+     * metodi generoi koodin luvut numeroiden 1 ja 9 väliltä.
+     *
+     * @param answerLength parametri on koodin pituuden lukuarvo.
+     */
     public Number(int answerLength) {
         this.answerLength = answerLength;
         answer = generate(this.answerLength, shuffle("123456789"));
@@ -31,6 +38,13 @@ public class Number {
         this.answer = num;
     }
 
+    /**
+     *
+     * @param answerLength kuvaa koodin pituutta.
+     * @param sh apuparametri tuottaa uuden numeron koodiin siihen asti kunnes
+     * koodi on answerLengthin pituinen.
+     * @return palauttaa answ.toStringin.
+     */
     private String generate(int answerLength, String sh) {
         StringBuilder answ = new StringBuilder();
         for (int i = 0; i <= answerLength - 1; i++) {
