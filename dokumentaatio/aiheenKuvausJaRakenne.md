@@ -9,19 +9,31 @@ Kuten Pickover, Clifford A:n The Math Book (2009) noteerasi:
 Käytännössä tulevaa peliä kuvaavat seuraavat suuntaviivat: 
 
 - [x] Se toteutetaan Javalla
-- [x] Käyttäjä tulee arpomaan oikeaa ratkaisua koneelta   
+- [x] Käyttäjä syöttää oman nimensä pelille
+- [x] Käyttäjä syöttää haluamansa pituuden pelin generoimalle koodille
+- [x] Peli pitää lukua käyttäjän arvausten määrästä
+- [x] Peli ilmoittaa käyttäjälle jokaisen arvauksen jälkeen täysin oikeiden arvausten (blacks) ja melkein oikeiden arvausten (whites) määrät
+- [x] Käyttäjän arvatessa koodin, peli kysyy käyttäjälktä, haluaako tämä jatkaa peliä (y/n?) ja lopettaa mikäli käyttäjä vastaa ei (n).   
 
 **Käyttäjät:** Opiskelija, Opetushallinto, sekä lähiössä lopeensa arkeensa tylsistynyt individuaali
 
 **Kaikkien käyttäjien toiminnot:** 
 
-	-järjestelmään kirjautuminen
-		*onnistuu jos salasana ja käyttäjätunnus oikein 
+	-kertoa pelille, kuka käyttäjä on
+	-kertoa pelille, minkä pituisen koodin haluaa ratkaista. 
 	-oikean rivin arvaus
+	-kertoa pelille, haluaako jatkaa vai ei.
 
 **Koneen toiminnot:**
 
-	-kertoo käyttäjälle, menikö rivi oikein
+	-kysyy käyttäjän nime'.
+	-kysyy, miten pitkän koodin käyttäjä haluaa ratkaistavaksi.
+	-antaa käyttäjälle koodin.
+	-tarkistaa käyttäjän arvauksen 
+	-ilmoittaa käyttäjän täysin oikeiden ja melkein oikeiden arvausten määrät.
+	-kertoo käyttäjälle, kun koodi on täysin oikea.
+	-ilmoittaa myös arvausten määrän.
+	-kysyy käyttäjältä, haluaako tämä jatkaa vai ei.
 
 
 
