@@ -39,4 +39,4 @@ Päivä | Tunnit | Kuvaus
 
 ![Alt text](https://yuml.me/34002b71)
 
-![Alt text](/home/lea/Mestarimieli/Mestarimieli/dokumentaatio/apidocs/SequenceDiagram667.png)
+![Alt text](SequenceDiagram667.png)
