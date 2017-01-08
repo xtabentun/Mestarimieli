@@ -22,19 +22,19 @@ public class UI {
     }
 
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-  
+    private boolean won = false;
 
     public void run() throws Exception {
 
         echo("Who are you? ");
         String name = input.readLine();
-        
+
         Player player = new Player(name);
-        
+
         echo(name + ", how long will be your quest? ");
-        String x =  input.readLine();
+        String x = input.readLine();
         int answerLength = Integer.parseInt(x);
-        
+
         Number number = new Number(answerLength) {
         };
 
@@ -43,15 +43,28 @@ public class UI {
         int[] retval;
 
         while (true) {
+
+            if (won) {
+                echo("Do you want to continue? ( y/n)\n");
+                String cont = input.readLine();
+                if (cont.equals("n")) {
+                    return;
+                }
+                if (!cont.equals("y")) {
+                    echo("Not an answer!");
+                    continue;
+                }
+            }
+
             player.guessesGrow();
             echo(answer + "Type number: ");
-            
+
             guess = input.readLine();
 
-            if ( answerLength != guess.length()) {
+            if (!number.guessLength(guess)) {
                 echo("Wrong length\n");
                 continue;
-            } 
+            }
 
             retval = number.checkAnswer(guess);
             int blacks = retval[0];
@@ -59,7 +72,8 @@ public class UI {
 //            echo("Blacks " + blacks + " Whites " + whites + "\n");
             if (blacks == answerLength) {
                 echo("You win teh game! Number of guesses " + player.getGuesses());
-                return;
+                won = true;
+                continue;
             } else {
                 echo("Blacks " + blacks + " Whites " + whites + "\n");
             }

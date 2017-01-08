@@ -21,8 +21,6 @@ public class Number {
     public Number(int answerLength) {
         this.answerLength = answerLength;
         answer = generate(this.answerLength, shuffle("123456789"));
-    
-
 
     }
 
@@ -36,7 +34,7 @@ public class Number {
 
     private String generate(int answerLength, String sh) {
         StringBuilder answ = new StringBuilder();
-        for (int i = 0; i <= answerLength-1; i++) {
+        for (int i = 0; i <= answerLength - 1; i++) {
             answ.append(sh.charAt(i));
         }
         return answ.toString();
@@ -57,23 +55,24 @@ public class Number {
 
     }
 
-    public int[]  checkAnswer(String guess) {
-        
+    public int[] checkAnswer(String guess) {
         int blacks = 0, whites = 0;
 
-        if (guess.length() == answerLength) {
-            for (int i = 0; i <= answerLength-1; i++) {
-                if (guess.charAt(i) == answer.charAt(i)) {
-                    blacks++;
-                } else if (answer.contains(guess.charAt(i) + "")) {
-                    whites++;
-                }
+        for (int i = 0; i <= answerLength - 1; i++) {
+            if (guess.charAt(i) == answer.charAt(i)) {
+                blacks++;
+            } else if (answer.contains(guess.charAt(i) + "")) {
+                whites++;
             }
-
         }
-            return new int[] { blacks, whites};
-            
+        return new int[]{blacks, whites};
+    }
+
+    public boolean guessLength(String guess) {
+        if (guess.length() == answerLength) {
+            return true;
+        }
+        return false;
     }
 
 }
-

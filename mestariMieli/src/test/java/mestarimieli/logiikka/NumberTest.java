@@ -51,8 +51,33 @@ public void testConstructor() {
     
     @Test
     public void testCheckAnswer1() {
-        int [] vittu = {4, 0};
-        Assert.assertArrayEquals(n.checkAnswer("1234"), vittu);
+        int [] eka = {4, 0};
+        Assert.assertArrayEquals(n.checkAnswer("1234"), eka);
     }
+    
+    @Test
+    public void testCheckAnswer2() {
+        int [] toka = {2, 2};
+        Assert.assertArrayEquals(n.checkAnswer("2134"), toka);
+    }
+    
+    @Test
+    public void testCheckAnswer3() {
+        int [] kolmas = {0, 4};
+        Assert.assertArrayEquals(n.checkAnswer("4321"), kolmas);
+    }
+    
+    @Test
+    public void testCheckAnswer4() {
+        int[] neljas = {1, 3};
+        Assert.assertArrayEquals(n.checkAnswer("1423"), neljas);
+    }
+    
+//    @Test
+//    public void testCheckAnswer5() {
+//        int[] viides = {0,0}
+//    }
+    
+    
     
 }
