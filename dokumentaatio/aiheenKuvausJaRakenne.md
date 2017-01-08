@@ -45,19 +45,19 @@ Päivä | Tunnit | Kuvaus
 
 ### Sekvenssikaaviot
 
-1. Käyttötapaus: Käyttäjä syöttää väärän ja sitten oikean pituisen koodin.  Käyttöliittymä käynnistyy ja tarkistaa Number-luokalta käyttäjän antaman koodin pituutta.  <br/>
+ - Käyttötapaus: Käyttäjä syöttää väärän ja sitten oikean pituisen koodin.  Käyttöliittymä käynnistyy ja tarkistaa Number-luokalta käyttäjän antaman koodin pituutta.  <br/>
 Käyttäjän syöttäessä väärän pituisen koodin, palauttaa Number-luokka falsen ja käyttäjälle tulostuu "Wrong Length". Käyttäjän arvatessa uudelleen pituutta Käyttöliittymä varmistaa Number-luokalta pituuden ja tämän ollessa sama, palautuu true. 
 
 ![Alt text](SequenceDiagram667.png)
 
-2. Käyttötapaus: Käyttäjä syöttää väärän määrän täysin oikeita (blacks) ja melkein oikeita (whites) ja sen jälkeen syöttää oikean määrän täysin oikeita, voittaen pelin. Käyttöliittymä tarkistaa arvauksen täysin oikeiden ja melkein oikeiden määrät Number-luokalta, joka palauttaa taulukkona määrät ja käyttäjälle tulostuu hänen saamansa täysin oikeiden ja melkein oikeiden arvaustensa määrä. Kun käyttäjä arvaa oikein, Number-luokka palauttaa taulukon ja käyttäjälle tulostuu ilmoitus hänen voitostaan.
+ - Käyttötapaus: Käyttäjä syöttää väärän määrän täysin oikeita (blacks) ja melkein oikeita (whites) ja sen jälkeen syöttää oikean määrän täysin oikeita, voittaen pelin. Käyttöliittymä tarkistaa arvauksen täysin oikeiden ja melkein oikeiden määrät Number-luokalta, joka palauttaa taulukkona määrät ja käyttäjälle tulostuu hänen saamansa täysin oikeiden ja melkein oikeiden arvaustensa määrä. Kun käyttäjä arvaa oikein, Number-luokka palauttaa taulukon ja käyttäjälle tulostuu ilmoitus hänen voitostaan.
 
 ![Alt text](SequenceDiagram668.png)
 
-3. Käyttötapaus: Käyttäjä luo nimen peliin. Käyttöliittymä kysyy käyttäjältä "Who are you?" ja käyttäjä syöttää nimensä kenttään. Käyttöliittymä luo uuden Player-olion kyseisellä nimellä Player-luokkaan ja samalla arvausten määrän lukuarvo "guesses" käynnistyy.
+ - Käyttötapaus: Käyttäjä luo nimen peliin. Käyttöliittymä kysyy käyttäjältä "Who are you?" ja käyttäjä syöttää nimensä kenttään. Käyttöliittymä luo uuden Player-olion kyseisellä nimellä Player-luokkaan ja samalla arvausten määrän lukuarvo "guesses" käynnistyy.
 
 ![Alt text](SequenceDiagram669.png)
 
-4. Käyttötapaus: Käyttäjä luo haluamansa pituisen koodin. Käyttöliittymä kysyy pituutta käyttäjältä, käyttäjä syöttää kenttään haluamansa koodin pituuden. Käyttöliittymä luo uuden Number-olion Number-luokkaan ja Number-luokan metodit generate() ja shuffle() muodostavat kyseisen pituisen koodin, ja luokka palauttaa sen vastauksena ("answer").
+ - Käyttötapaus: Käyttäjä luo haluamansa pituisen koodin. Käyttöliittymä kysyy pituutta käyttäjältä, käyttäjä syöttää kenttään haluamansa koodin pituuden. Käyttöliittymä luo uuden Number-olion Number-luokkaan ja Number-luokan metodit generate() ja shuffle() muodostavat kyseisen pituisen koodin, ja luokka palauttaa sen vastauksena ("answer").
 
 ![Alt text](SequenceDiagram670.png)
