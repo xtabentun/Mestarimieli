@@ -1,5 +1,6 @@
-logiikka/Number.class
-ui/UI$1.class
+logiikka/Player.class
 gui/GUI.class
 mestarimieli/mestarimieli/Main.class
+logiikka/Number.class
+ui/UI$1.class
 ui/UI.class

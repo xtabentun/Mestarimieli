@@ -48,14 +48,13 @@ public class UI {
                 echo("Do you want to continue? ( y/n)\n");
                 String cont = input.readLine();
                 if (cont.equals("n")) {
-                    return;
+                    exit(0);
                 }
                 if (!cont.equals("y")) {
                     echo("Not an answer!");
                     continue;
-                }
+                } else { won = false;}
             }
-
             player.guessesGrow();
             echo(answer + "Type number: ");
 
