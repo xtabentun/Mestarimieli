@@ -8,8 +8,8 @@ package ui;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import static java.lang.System.exit;
-import logiikka.Number;
-import logiikka.Player;
+import mestarimieli.logiikka.Number;
+import mestarimieli.logiikka.Player;
 
 /**
  *

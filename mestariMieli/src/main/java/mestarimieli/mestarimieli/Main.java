@@ -5,7 +5,7 @@
  */
 package mestarimieli.mestarimieli;
 
-import gui.GUI;
+import mestarimieli.gui.GUI;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

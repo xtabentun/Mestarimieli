@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logiikka;
+package mestarimieli.logiikka;
 
 import java.util.ArrayList;
 import static java.util.Collections.list;

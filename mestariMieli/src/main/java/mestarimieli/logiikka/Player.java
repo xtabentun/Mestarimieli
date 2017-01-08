@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logiikka;
+package mestarimieli.logiikka;
 
 /**
  *
@@ -12,10 +12,11 @@ package logiikka;
 public class Player {
 
     private String name;
-    private int guesses = 0;
+    private int guesses ;
 
     public Player(String name) {
         this.name = name;
+        guesses=0;
         
     }
 
@@ -23,10 +24,10 @@ public class Player {
         return guesses;
     }
 
-    public void setGuesses(int guesses) {
-        this.guesses = guesses;
-        
-    }
+//    public void setGuesses(int guesses) {
+//        this.guesses = guesses;
+//        
+//    }
     
     public void guessesGrow() {
        guesses+=1;
@@ -36,8 +37,8 @@ public class Player {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
 }

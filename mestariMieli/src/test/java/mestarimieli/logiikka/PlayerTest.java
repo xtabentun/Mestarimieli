@@ -5,8 +5,10 @@
  */
 package mestarimieli.logiikka;
 
+//import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -18,23 +20,27 @@ import static org.junit.Assert.*;
  */
 public class PlayerTest {
     
+    Player testPlayer = new Player("Testaaja");
+ 
+    
     public PlayerTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @Test
+    public void testConstructor() {
+       Assert.assertEquals(testPlayer.getName(), "Testaaja");
     }
     
-    @AfterClass
-    public static void tearDownClass() {
+    @Test
+    public void testGuesses() {
+        testPlayer.guessesGrow();
+        Assert.assertEquals(testPlayer.getGuesses(), 1);
     }
     
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+    @Test
+    public void testGuessesFail() {
+        testPlayer.guessesGrow();
+        Assert.assertNotEquals(testPlayer.getGuesses(), 2);
     }
 
     // TODO add test methods here.
