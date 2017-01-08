@@ -6,6 +6,9 @@ Tämä on Mastermind-peli, joka toimii neljän numeron sarjojen arvauksilla. Nel
 
 ### Dokumentaatio
 
+- <a href="https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md" title="Title">
+Aiheen kuvaus</a>
+
 - <a href="https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/tuntikirjanpito.md" title="Title">
 Tuntikirjanpito</a>
 
