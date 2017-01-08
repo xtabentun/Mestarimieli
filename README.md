@@ -5,4 +5,4 @@ Tämä on Mastermind-peli, joka toimii neljän numeron sarjojen arvauksilla. Nel
 
 - Pit : https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/pit/201701081248/index.html 
 
-- Javadoc : https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/apidocs/index.html
+- Javadoc-raportti : https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/apidocs/index.html
