@@ -39,4 +39,12 @@ Päivä | Tunnit | Kuvaus
 
 ![Alt text](https://yuml.me/34002b71)
 
+### Sekvenssikaaviot
+
 ![Alt text](SequenceDiagram667.png)
+
+![Alt text](SequenceDiagram668.png)
+
+![Alt text](SequenceDiagram669.png)
+
+!Alt text](SequenceDiagram670.png)
