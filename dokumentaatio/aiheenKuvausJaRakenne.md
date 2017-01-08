@@ -41,7 +41,7 @@ Päivä | Tunnit | Kuvaus
 
 ### Luokkakaavio 
 
-![Alt text](https://yuml.me/81a37e07)
+![Alt text](https://yuml.me/28952192)
 
 ### Sekvenssikaaviot
 
