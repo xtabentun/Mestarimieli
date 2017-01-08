@@ -37,8 +37,8 @@ public class Player {
      * @param name String muotoinen muuttuja, käyttäjän nimi.
      */
     public Player(String name) {
-        this.name=name;
-        guesses=0;
+        this.name = name;
+        guesses = 0;
     }
 
     /**
@@ -75,7 +75,7 @@ public class Player {
      * Metodi kasvattaa arvausten määrää yhdellä.
      */
     public void guessesGrow() {
-        guesses+=1;
+        guesses += 1;
     }
 
     public String getName() {

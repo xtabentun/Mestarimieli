@@ -70,7 +70,8 @@ public class UI {
                     echo("Not an answer!"); 
                     continue;
                 } else { 
-                    won = false;}
+                    won = false; 
+                }
             }
             player.guessesGrow();
             echo(answer + "Type number: ");
