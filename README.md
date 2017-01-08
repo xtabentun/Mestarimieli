@@ -7,5 +7,14 @@ Tämä on Mastermind-peli, joka toimii neljän numeron sarjojen arvauksilla. Nel
 
 - Javadoc-raportti : https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/apidocs/index.html
 
-- <p>This is <a href="http://example.com/" title="Title">
-an example</a> inline link.</p>
+- <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/site/checkstyle.html
+" title="Title">
+Checkstyle</a> 
+
+- <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/pit/201701081248/index.html
+" title="Title">
+Pit</a> 
+
+- <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/apidocs/index.html
+" title="Title">
+Javadoc</a> 
