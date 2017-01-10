@@ -33,7 +33,7 @@ class NameListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         player1.setName(name.getText());
-        remove(gamefield);
+        
     }
 
 }
