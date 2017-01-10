@@ -9,4 +9,6 @@ Päivä | Tunnit | Kuvaus
 06.01.2017 | 4.0h | Testien tekoa, javadocin päivitystä
 07.01.2017 | 6.0h | Player ja Number luokat logiikkaan, laajennuksia, testejä
 08.01.2017 | 7.0h | Uusia metodeja, sekvenssikaaviot, luokkakaavion päivitys, testejä
+09.01.2017 | 3.0h | GUIn rakentamista
+10.01.2017 | 12.0h| GUIn kanssa työskentelyä, layouttien kokeilemista, luokkien luontia
 
