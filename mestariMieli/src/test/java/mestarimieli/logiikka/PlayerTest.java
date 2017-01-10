@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
  */
 public class PlayerTest {
     
-    Player testPlayer = new Player("Testaaja");
+    Player testPlayer = new Player();
  
     
     public PlayerTest() {
@@ -28,6 +28,7 @@ public class PlayerTest {
     
     @Test
     public void testConstructor() {
+        testPlayer.setName("Testaaja");
        Assert.assertEquals(testPlayer.getName(), "Testaaja");
     }
     
