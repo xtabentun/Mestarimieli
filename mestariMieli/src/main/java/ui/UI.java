@@ -44,7 +44,8 @@ public class UI {
         echo("Who are you? ");
         String name = input.readLine();
 
-        Player player = new Player(name);
+        Player player = new Player();
+        player.setName(name);
 
         echo(name + ", how long will be your quest? ");
         String x = input.readLine();
@@ -91,7 +92,7 @@ public class UI {
             int whites = retval[1];
 //            echo("Blacks " + blacks + " Whites " + whites + "\n");
             if (blacks == answerLength) {
-                echo("You win teh game! Number of guesses " + player.getGuesses());
+                echo("You win teh game! Number of guesses " + player.getGuesses()+ "\n");
                 won = true;
 //                continue;
             } else {

@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Player {
 
-    private final String name;
+    private String name;
     private int guesses;
     private final List<String> guessList = new ArrayList();
 
@@ -36,8 +36,8 @@ public class Player {
      *
      * @param name String muotoinen muuttuja, käyttäjän nimi.
      */
-    public Player(String name) {
-        this.name = name;
+    public Player() {
+        this.name = null;
         guesses = 0;
     }
 
@@ -80,6 +80,10 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
     }
 
 //    public void setName(String name) {

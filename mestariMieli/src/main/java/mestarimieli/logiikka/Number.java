@@ -65,6 +65,7 @@ public class Number {
         for (char c : input.toCharArray()) {
             characters.add(c);
         }
+        
         StringBuilder output = new StringBuilder(input.length());
         while (!characters.isEmpty()) {
             int randPicker = (int) (Math.random() * characters.size());
