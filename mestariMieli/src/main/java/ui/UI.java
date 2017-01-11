@@ -53,7 +53,7 @@ public class UI {
 
         Number number = new Number() {
         };
-number.setAnswerLength(answerLength);
+        number.setAnswerLength(answerLength);
         String answer = number.getAnswer();
         String guess;
         
@@ -92,7 +92,7 @@ number.setAnswerLength(answerLength);
             int whites = retval[1];
 //            echo("Blacks " + blacks + " Whites " + whites + "\n");
             if (blacks == answerLength) {
-                echo("You win teh game! Number of guesses " + player.getGuesses()+ "\n");
+                echo("You win teh game! Number of guesses " + player.getGuesses() + "\n");
                 won = true;
 //                continue;
             } else {

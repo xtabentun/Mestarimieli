@@ -34,7 +34,6 @@ public class Player {
      * Metodi huolehtii käyttäjän nimestä ja arvausten lukumäärä on määritelty
      * myös täällä.
      *
-     * @param name String muotoinen muuttuja, käyttäjän nimi.
      */
     public Player() {
         this.name = null;

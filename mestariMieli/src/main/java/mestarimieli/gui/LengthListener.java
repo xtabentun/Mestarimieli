@@ -29,15 +29,15 @@ class LengthListener implements ActionListener {
     
     public LengthListener(JTextField length, GUI gui, Number number) {
         this.length = length;
-       this.number = number;
-       this.gui = gui;
+        this.number = number;
+        this.gui = gui;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         this.number.setAnswerLength(Integer.parseInt(length.getText()));
         number.generateAnswer();
-         gui.setNewPane(gui.setGameArea());
+        gui.setNewPane(gui.setGameArea());
     }
 
 }

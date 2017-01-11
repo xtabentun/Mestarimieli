@@ -19,11 +19,9 @@ public class Number {
     private String answer;
     private int answerLength;
 
-    /**
-     * metodi generoi koodin luvut numeroiden 1 ja 9 väliltä.
-     *
-     * @param answerLength parametri on koodin pituuden lukuarvo.
-     */
+  /**
+   * Luokan konstruktori.
+   */
     public Number() {
         this.answerLength = 0;
         this.answer = null;
@@ -32,10 +30,12 @@ public class Number {
     public void setAnswerLength(int length) {
       this.answerLength = length;
     }
-    
+        
+    /**
+     *  Metodi generoi koodin luvut numeroiden 1 ja 9 väliltä.
+     */
     public void generateAnswer() {
-               answer = generate(this.answerLength, shuffle("123456789"));
-               
+        answer = generate(this.answerLength, shuffle("123456789"));          
     }
 
     public int getAnswerLength() {
