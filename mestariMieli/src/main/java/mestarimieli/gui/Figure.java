@@ -6,9 +6,7 @@
 package mestarimieli.gui;
 
 import java.awt.Graphics;
-
-/**@author lea Hahmoluokka mahdollista X ja O vihjeiden graafisempaa ilmaisua varten. 
- */
+/**@author lea Hahmoluokka mahdollista X ja O vihjeiden graafisempaa ilmaisua varten. */
 public class Figure {
 
     private int x;
@@ -38,7 +36,7 @@ public class Figure {
     * @param dx leveys.
     * @param dy pituus.
     */
-   public void move(int dx, int dy) {
+    public void move(int dx, int dy) {
         this.x += dx;
         this.y += dy;
     }
@@ -47,8 +45,8 @@ public class Figure {
     * metodi draw piirtää kuvion ympyränä.
     * @param graphics apuna ympyränpiirrossa.
     */
-public void draw(Graphics graphics) {
-    graphics.fillOval(x, y, 10, 10);
-    }     
+    public void draw(Graphics graphics) {
+        graphics.fillOval(x, y, 10, 10);
+        }     
         
-    }
+}

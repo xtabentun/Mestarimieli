@@ -28,7 +28,7 @@ public class Number {
     }
     
     public void setAnswerLength(int length) {
-      this.answerLength = length;
+        this.answerLength = length;
     }
         
     /**

@@ -7,12 +7,8 @@
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/gui/GuessListener.java">
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/gui/Figure.java">
-<error line="10" severity="error" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
-<error line="41" severity="error" message="&apos;method def modifier&apos; have incorrect indentation level 3, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="50" severity="error" message="&apos;method def modifier&apos; have incorrect indentation level 0, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="51" severity="error" message="&apos;method call&apos; child have incorrect indentation level 4, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="51" severity="error" message="&apos;method def&apos; child have incorrect indentation level 4, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="54" severity="error" message="&apos;class def rcurly&apos; have incorrect indentation level 4, expected level should be 0." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="9" severity="error" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="50" severity="error" message="&apos;method def rcurly&apos; have incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/gui/DrawingCanvas.java">
 </file>
@@ -21,7 +17,6 @@
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/gui/NameListener.java">
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/logiikka/Number.java">
-<error line="31" severity="error" message="&apos;method def&apos; child have incorrect indentation level 6, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/home/lea/Mestarimieli/Mestarimieli/mestariMieli/src/main/java/mestarimieli/logiikka/Player.java">
 </file>
