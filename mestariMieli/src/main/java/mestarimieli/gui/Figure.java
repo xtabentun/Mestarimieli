@@ -17,12 +17,12 @@ public class Figure {
     private int y;
     
     public Figure(int x, int y) {
+        this.x = x;
+        this.y = y;
         
     }
     
-    public void move(int dx, int dy) {
-        
-    }
+   
     
     public int getX() {
         return x;
@@ -32,8 +32,14 @@ public class Figure {
         return y;
     }
     
-  
-        
+   public void move(int dx, int dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+     
+public void draw(Graphics graphics) {
+    graphics.fillOval(x, y, 10, 10);
+}   
     
     
 

@@ -13,14 +13,18 @@ import javax.swing.JPanel;
  *
  * @author lea
  */
-public class Piirtoalusta extends JPanel {
+public class DrawingCanvas extends JPanel {
+    
+    private Figure figure;
 
-    public Piirtoalusta() {
+    public DrawingCanvas() {
         super.setBackground(Color.WHITE);
+        this.figure = figure;
     }
 
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
+        figure.draw(graphics);
     }
 }

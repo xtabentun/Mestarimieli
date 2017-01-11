@@ -10,6 +10,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -32,10 +33,10 @@ import mestarimieli.logiikka.Number;
 public class GUI implements Runnable {
 
     private JFrame frame;
-
     private final Player player;
     public Number number;
     private int stage;
+    public boolean won;
 
     /**
      * Luokka luo framen pelille.
@@ -44,24 +45,34 @@ public class GUI implements Runnable {
     public GUI() {
         player = new Player();
         stage = 0;
+        won = false;
+        number = new Number();
+        
     }
 
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
-        frame.setPreferredSize(new Dimension(300, 300));
+        frame.setPreferredSize(new Dimension(500, 500));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 //        createComponents(frame.getContentPane());
-        frame.getContentPane().add(guessArea());
-        frame.setContentPane(setNumber());
+        //   frame.getContentPane().add(guessArea());
+        frame.setContentPane(setPlayerName());
+        //frame.setContentPane(setNumber());
         frame.revalidate(); // frame.pack() if you want to resize.
 //         frame.getContentPane().add(setNumber());
 
         frame.pack();
         frame.setVisible(true);
 
+    }
+
+    public void setNewPane(JPanel p) {
+        frame.setContentPane(p);
+        frame.revalidate();
+        frame.pack();
     }
 
     private JMenuBar menuBar() {
@@ -74,27 +85,52 @@ public class GUI implements Runnable {
         BoxLayout layout = new BoxLayout(container, BoxLayout.LINE_AXIS);
         container.setLayout(layout);
 
-        container.add(guessArea());
+        container.add(setGameArea());
 //        container.add(setNumber());
         container.add(historyArea());
-
     }
 
-    private JPanel guessArea() {
+    public JPanel setGameArea() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
 
-//        
+        JLabel question = new JLabel("Type number: ");
+
+        JTextField guess = new JTextField();
+
+        JButton submit = new JButton("Submit");
+        JLabel hint = new JLabel("Gambatte!");
+                System.out.println("hello");
+               
+      
+
+        
+        gamefield.add(question);
+        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
+        gamefield.add(guess);
+        gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
+        gamefield.add(submit);
+        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
+         gamefield.add(hint);
+        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
+  submit.addActionListener(new GuessListener(guess, number, this, player, hint));
+        return gamefield;
+    }
+
+    private JPanel setPlayerName() {
+        JPanel gamefield = new JPanel();
+        gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
+        gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel("Who are you?");
 
         JTextField name = new JTextField();
-        gamefield.add(name);
 
         JButton submit = new JButton("Submit");
 
-        submit.addActionListener(new NameListener(name, player, gamefield));
+        submit.addActionListener(new NameListener(name, player, this));
 
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
@@ -106,34 +142,7 @@ public class GUI implements Runnable {
         return gamefield;
     }
 
-    private JPanel setPlayerName() {
-
-        JPanel gamefield = new JPanel();
-        gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
-        gamefield.add(Box.createHorizontalGlue());
-//        JLabel question = new JLabel("Who are you?");
-//        
-//        JTextField name = new JTextField();
-//        gamefield.add(name);
-//
-//        JButton submit = new JButton("Submit");
-//
-//        submit.addActionListener(new NameListener(name, player, gamefield));
-//
-//        gamefield.add(question);
-//        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-//        gamefield.add(name);
-//        gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
-//        gamefield.add(submit);
-//        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-//       
-        return gamefield;
-
-    }
-
-    
-    private JPanel setNumber() {
+    public JPanel setNumber() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
@@ -145,7 +154,7 @@ public class GUI implements Runnable {
 
         JButton submit = new JButton("Submit");
 
-        submit.addActionListener(new LengthListener(length, number));
+        submit.addActionListener(new LengthListener(length, this, number));
 
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
@@ -160,7 +169,8 @@ public class GUI implements Runnable {
     public JFrame getFrame() {
         return frame;
     }
-public JPanel historyArea() {
+
+    public JPanel historyArea() {
         JPanel everything = new JPanel();
 
         everything.setLayout(new BoxLayout(everything, BoxLayout.PAGE_AXIS));
@@ -174,7 +184,7 @@ public JPanel historyArea() {
 
         return everything;
     }
-    
+
 //    private Container getContentPane() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }

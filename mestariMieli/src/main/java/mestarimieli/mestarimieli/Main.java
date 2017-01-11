@@ -15,6 +15,7 @@ import java.util.Random;
 import java.util.Scanner;
 import ui.UI;
 import javax.swing.SwingUtilities;
+import mestarimieli.gui.Figure;
 
 /*Mestarimieli-peli, jonka toteutus toimii numeropohjaisena: käyttäjä arvaa
 nelikirjaimisen jonon, joka muodostuu numeroista 123456789, 0 ei ole käytössä. Koodipalloja ovat tässä siis numerot 1-9 ja avainpalloja mustat ja valkoiset: e.g. blacks ja whites. 
@@ -35,9 +36,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         GUI g = new GUI();
         SwingUtilities.invokeLater(g);
-       
-   
+            
         UI m = new UI();
-        m.run(); 
+        m.run();
     }
+    
+    //tänne {while(1);}
+    
 }

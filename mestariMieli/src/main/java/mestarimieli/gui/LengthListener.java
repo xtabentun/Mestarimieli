@@ -18,16 +18,20 @@ class LengthListener implements ActionListener {
 
     private final JTextField length;
     private Number number;
+    private final GUI gui;
 
-    public LengthListener(JTextField length, Number number) {
+    public LengthListener(JTextField length, GUI gui, Number number) {
         this.length = length;
        this.number = number;
+       this.gui = gui;
     }
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        number = new Number(Integer.parseInt(length.getText()));
+        this.number.setAnswerLength(Integer.parseInt(length.getText()));
+        number.generateAnswer();
+         gui.setNewPane(gui.setGameArea());
+         
     }
 
 }
