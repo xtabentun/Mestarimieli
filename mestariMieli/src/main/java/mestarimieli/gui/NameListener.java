@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import mestarimieli.logiikka.Player;
 
 /**
+ * Luokka implementoi Actionlistener:n.
  * @author lea
  */
 class NameListener implements ActionListener {
@@ -20,6 +21,13 @@ class NameListener implements ActionListener {
     JPanel gamefield;
     GUI frame;
 
+    /**
+     * Luokan konstruktori.
+     * @param name parametri nimen kirjoittamiskenttää varten.
+     * @param player Player luokan parametri.
+     * @param frame GUI luokan parametri.
+     */
+    
     public NameListener(JTextField name, Player player, GUI frame) {
         this.name = name;
         this.player = player;

@@ -23,7 +23,7 @@ import mestarimieli.logiikka.Player;
 import mestarimieli.logiikka.Number;
 
 /**
- * Graafinen käyttöliittymä joka luo uuden ikkunan peliä varten.
+ * Graafinen käyttöliittymä joka luo uuden ikkunan peliä varten. Käyttäjä voi näin pelata graafisessa ikkunassa.
  *
  * @author lzkosone
  */
@@ -36,7 +36,7 @@ public class GUI implements Runnable {
     public boolean won;
 
     /**
-     * Luokka luo framen pelille.
+     * Luokan konstruktori.
      *
      */
     public GUI() {
@@ -57,6 +57,11 @@ public class GUI implements Runnable {
         frame.setVisible(true);
     }
 
+    /**
+     *  Metodilla voi asettaa mikä paneeli näkyy käyttäjälle instanssin ulkopuolelta.
+     * @param p parametripaneeli.
+     */
+    
     public void setNewPane(JPanel p) {
         frame.setContentPane(p);
         frame.revalidate();
@@ -68,13 +73,11 @@ public class GUI implements Runnable {
         return menuBar;
     }
 
-    private void createComponents(Container container) {
-        BoxLayout layout = new BoxLayout(container, BoxLayout.LINE_AXIS);
-        container.setLayout(layout);
-        container.add(setGameArea());
-        container.add(historyArea());
-    }
-
+    /**
+     *  Metodi luo uuden gamefield JPanelin, jolle asetetaan tietyt mitat ja johon asetetaan komponentteja, kuten nappeja ja tekstikenttää. Pelaaja siis käy tässä paneelissa peliä.
+     * @return metodi palauttaa JPanel gamefieldin.
+     */
+    
     public JPanel setGameArea() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
@@ -114,6 +117,11 @@ public class GUI implements Runnable {
         return gamefield;
     }
 
+    /**
+     * Metodi luo JPanel-näkymän käyttäjälle, jossa kysytään koodin pituutta. 
+     * @return palauttaa gamefieldin.
+     */
+    
     public JPanel setNumber() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
@@ -137,6 +145,11 @@ public class GUI implements Runnable {
         return frame;
     }
 
+    /**
+     * Metodi tulee tuottamaan kentän, jossa käyttäjä näkee syötehistoriansa ja voi arvioida koodia tämän perusteella.
+     * @return palauttaa JPanel everythingin.
+     */
+    
     public JPanel historyArea() {
         JPanel everything = new JPanel();
         everything.setLayout(new BoxLayout(everything, BoxLayout.PAGE_AXIS));

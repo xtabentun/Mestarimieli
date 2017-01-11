@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 import mestarimieli.logiikka.Number;
 
 /**
- *
+ * Luokka implementoi ActionListenerin.
  * @author lea
  */
 class LengthListener implements ActionListener {
@@ -20,6 +20,13 @@ class LengthListener implements ActionListener {
     private Number number;
     private final GUI gui;
 
+    /**
+     * Luokan konstruktori.
+     * @param length JTextField tyyppinen parametri.
+     * @param gui GUI luokan parametri.
+     * @param number Number luokan parametri.
+     */
+    
     public LengthListener(JTextField length, GUI gui, Number number) {
         this.length = length;
        this.number = number;
