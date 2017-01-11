@@ -26,4 +26,4 @@ Javadoc</a>
 
 - <a href="https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/kaeyttoeohjeet.md
 " title="Title">
-Kaeyttoeohjeet</a>
+Käytöohjeet</a>
