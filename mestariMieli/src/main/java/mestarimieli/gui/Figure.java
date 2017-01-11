@@ -6,7 +6,7 @@
 package mestarimieli.gui;
 
 import java.awt.Graphics;
-/**@author lea Hahmoluokka mahdollista X ja O vihjeiden graafisempaa ilmaisua varten. */
+/**Hahmoluokka mahdollista X ja O vihjeiden graafisempaa ilmaisua varten. */
 public class Figure {
 
     private int x;
@@ -47,6 +47,6 @@ public class Figure {
     */
     public void draw(Graphics graphics) {
         graphics.fillOval(x, y, 10, 10);
-        }     
+    }     
         
 }
