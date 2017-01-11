@@ -61,6 +61,20 @@ public class PlayerTest {
         Assert.assertEquals(testPlayer.getGuessList().get(0), "6789");
         Assert.assertNotEquals(testPlayer.getGuessList().get(1), "3256");
     }
+    
+    @Test
+    public void testGuessCheckList() {
+            int[] g1 = {0,1};
+        int[] g2 = {1,0};
+        int[] g3 = {0,0};
+        
+        testPlayer.updateGuessCheckList(g1);
+        testPlayer.updateGuessCheckList(g2);
+        testPlayer.updateGuessCheckList(g3);
+        
+        Assert.assertEquals(3, testPlayer.getGuessCheckList().size());
+        Assert.assertNotEquals(testPlayer.getGuessCheckList().size(), 2);
+    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
