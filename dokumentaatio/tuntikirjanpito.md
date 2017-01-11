@@ -11,4 +11,4 @@ Päivä | Tunnit | Kuvaus
 08.01.2017 | 7.0h | Uusia metodeja, sekvenssikaaviot, luokkakaavion päivitys, testejä
 09.01.2017 | 3.0h | GUIn rakentamista
 10.01.2017 | 12.0h| GUIn kanssa työskentelyä, layouttien kokeilemista, luokkien luontia
-
+11.01.2017 | 10.5h| GUIn saaminen stabiiliin tilaan, uusia luokkia, riippuvuuksia, konstruktorien muokkaamista, javadoc, pit, checkstyle, käyttöohjeet, rakennekuvaus, ajettavan .jar tiedoston luonti
