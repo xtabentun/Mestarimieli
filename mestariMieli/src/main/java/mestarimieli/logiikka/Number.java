@@ -27,7 +27,11 @@ public class Number {
     public Number() {
         this.answerLength = 0;
         this.answer = null;
-
+    }
+    
+    public Number(int n) {
+        this.answerLength = n;
+        this.answer = null;
     }
     
     public void setAnswerLength(int length) {
