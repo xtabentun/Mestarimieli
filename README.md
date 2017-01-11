@@ -20,7 +20,7 @@ Checkstyle-raportti</a>
 " title="Title">
 Pit</a> 
 
-- <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/apidocs/index.html
+- <a href="file:///home/lea/Mestarimieli/Mestarimieli/mestariMieli/target/site/apidocs/index.html
 " title="Title">
 Javadoc</a> 
 
