@@ -6,6 +6,8 @@
 package mestarimieli.logiikka;
 
 //import junit.framework.Assert;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -21,6 +23,7 @@ import static org.junit.Assert.*;
 public class PlayerTest {
     
     Player testPlayer = new Player();
+    
  
     
     public PlayerTest() {
@@ -42,6 +45,21 @@ public class PlayerTest {
     public void testGuessesFail() {
         testPlayer.guessesGrow();
         Assert.assertNotEquals(testPlayer.getGuesses(), 2);
+    }
+    
+    @Test
+    public void testGuessList() {
+        String g1 = "6789";
+        String g2 = "3456";
+        String g3 = "1234";
+        
+        testPlayer.updateGuessList(g1);
+        testPlayer.updateGuessList(g2);
+        testPlayer.updateGuessList(g3);
+        
+        Assert.assertEquals(3, testPlayer.getGuessList().size());
+        Assert.assertEquals(testPlayer.getGuessList().get(0), "6789");
+        Assert.assertNotEquals(testPlayer.getGuessList().get(1), "3256");
     }
 
     // TODO add test methods here.
