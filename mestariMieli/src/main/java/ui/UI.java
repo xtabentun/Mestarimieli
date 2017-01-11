@@ -51,9 +51,9 @@ public class UI {
         String x = input.readLine();
         int answerLength = Integer.parseInt(x);
 
-        Number number = new Number(answerLength) {
+        Number number = new Number() {
         };
-
+number.setAnswerLength(answerLength);
         String answer = number.getAnswer();
         String guess;
         

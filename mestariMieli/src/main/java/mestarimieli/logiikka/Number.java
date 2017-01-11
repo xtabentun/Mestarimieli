@@ -29,11 +29,6 @@ public class Number {
         this.answer = null;
     }
     
-    public Number(int n) {
-        this.answerLength = n;
-        this.answer = null;
-    }
-    
     public void setAnswerLength(int length) {
       this.answerLength = length;
     }

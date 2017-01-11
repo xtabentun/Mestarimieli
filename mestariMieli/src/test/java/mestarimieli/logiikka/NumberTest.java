@@ -38,7 +38,7 @@ public class NumberTest {
 
     @Test
     public void testConstructor() {
-        Assert.assertEquals(n.getAnswer().length(), 4);
+        Assert.assertEquals(n.getAnswerLength(), 4);
         Assert.assertNotEquals(n.getAnswer().length(), 3);
     }
 
