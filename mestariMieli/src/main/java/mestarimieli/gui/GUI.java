@@ -8,9 +8,6 @@ package mestarimieli.gui;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -35,7 +32,7 @@ public class GUI implements Runnable {
     private JFrame frame;
     private final Player player;
     public Number number;
-    private int stage;
+    private final int stage;
     public boolean won;
 
     /**
@@ -47,26 +44,17 @@ public class GUI implements Runnable {
         stage = 0;
         won = false;
         number = new Number();
-        
     }
 
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
         frame.setPreferredSize(new Dimension(500, 500));
-
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-//        createComponents(frame.getContentPane());
-        //   frame.getContentPane().add(guessArea());
         frame.setContentPane(setPlayerName());
-        //frame.setContentPane(setNumber());
-        frame.revalidate(); // frame.pack() if you want to resize.
-//         frame.getContentPane().add(setNumber());
-
+        frame.revalidate();
         frame.pack();
         frame.setVisible(true);
-
     }
 
     public void setNewPane(JPanel p) {
@@ -77,16 +65,13 @@ public class GUI implements Runnable {
 
     private JMenuBar menuBar() {
         JMenuBar menuBar = null;
-
         return menuBar;
     }
 
     private void createComponents(Container container) {
         BoxLayout layout = new BoxLayout(container, BoxLayout.LINE_AXIS);
         container.setLayout(layout);
-
         container.add(setGameArea());
-//        container.add(setNumber());
         container.add(historyArea());
     }
 
@@ -95,27 +80,19 @@ public class GUI implements Runnable {
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
-
         JLabel question = new JLabel("Type number: ");
-
         JTextField guess = new JTextField();
-
         JButton submit = new JButton("Submit");
         JLabel hint = new JLabel("Gambatte!");
-                System.out.println("hello");
-               
-      
-
-        
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(guess);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-         gamefield.add(hint);
+        gamefield.add(hint);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-  submit.addActionListener(new GuessListener(guess, number, this, player, hint));
+        submit.addActionListener(new GuessListener(guess, number, this, player, hint));
         return gamefield;
     }
 
@@ -125,20 +102,15 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel("Who are you?");
-
         JTextField name = new JTextField();
-
         JButton submit = new JButton("Submit");
-
         submit.addActionListener(new NameListener(name, player, this));
-
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(name);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-
         return gamefield;
     }
 
@@ -148,21 +120,16 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel(player.getName() + ", how long will be your quest? ");
-
         JTextField length = new JTextField();
         gamefield.add(length);
-
         JButton submit = new JButton("Submit");
-
         submit.addActionListener(new LengthListener(length, this, number));
-
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(length);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-
         return gamefield;
     }
 
@@ -172,20 +139,13 @@ public class GUI implements Runnable {
 
     public JPanel historyArea() {
         JPanel everything = new JPanel();
-
         everything.setLayout(new BoxLayout(everything, BoxLayout.PAGE_AXIS));
-
         JLabel teksti = new JLabel("Pelin_kenttä");
         JButton nappi = new JButton("Click!");
         JTextArea textAreaVasen = new JTextArea("Le Kopioija");
-
         everything.add(teksti);
         everything.add(nappi);
-
         return everything;
     }
 
-//    private Container getContentPane() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
 }

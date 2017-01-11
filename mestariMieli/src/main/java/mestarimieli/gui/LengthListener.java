@@ -31,7 +31,6 @@ class LengthListener implements ActionListener {
         this.number.setAnswerLength(Integer.parseInt(length.getText()));
         number.generateAnswer();
          gui.setNewPane(gui.setGameArea());
-         
     }
 
 }

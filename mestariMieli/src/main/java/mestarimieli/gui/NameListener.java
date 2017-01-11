@@ -7,33 +7,28 @@ package mestarimieli.gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
-
- /**
+/**
  * @author lea
  */
 class NameListener implements ActionListener {
-
-    private JTextField name;
-    private Player player1;
+    private final JTextField name;
+    private final Player player;
     JPanel gamefield;
     GUI frame;
-   
 
-    public NameListener(JTextField name, Player player1, GUI frame) {
+    public NameListener(JTextField name, Player player, GUI frame) {
         this.name = name;
-        this.player1 = player1;
+        this.player = player;
         this.frame = frame;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        player1.setName(name.getText());
+        player.setName(name.getText());
         frame.setNewPane(frame.setNumber());
     }
 }

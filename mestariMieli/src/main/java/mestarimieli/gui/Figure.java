@@ -19,11 +19,8 @@ public class Figure {
     public Figure(int x, int y) {
         this.x = x;
         this.y = y;
-        
     }
-    
-   
-    
+
     public int getX() {
         return x;
     }
@@ -39,8 +36,6 @@ public class Figure {
      
 public void draw(Graphics graphics) {
     graphics.fillOval(x, y, 10, 10);
-}   
-    
-    
+}     
 
 }
