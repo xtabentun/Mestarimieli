@@ -41,7 +41,7 @@ Käytännössä tulevaa peliä kuvaavat seuraavat suuntaviivat:
 
 ### Luokkakaavio 
 
-![Alt text](https://yuml.me/28952192)
+![Alt text](https://yuml.me/fde17eec)
 
 ### Sekvenssikaaviot
 
