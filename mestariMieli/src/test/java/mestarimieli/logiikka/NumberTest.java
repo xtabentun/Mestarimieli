@@ -19,12 +19,12 @@ import org.junit.Assert;
  */
 public class NumberTest {
 
-    Number n = new Number(4);
+    Number n = new Number();
     String answer;
 
     public NumberTest() {
         n.setAnswer("1234");
-
+        n.setAnswerLength(4);
         answer = n.getAnswer();
 
     }
@@ -81,6 +81,17 @@ public class NumberTest {
         Assert.assertFalse(n.checkGuessLength(guess2));
     }
 
+    
+   @Test
+   public void testGenerateNumber() {
+       n.generateAnswer();
+       
+       Assert.assertEquals(n.getAnswer().length(), 4);
+       Assert.assertNotEquals(n.getAnswer(), 5);
+       Assert.assertNotEquals(n.getAnswer(), 3);
+   }
+   
+   
 //    @Test
 //    public void testCheckAnswer5() {
 //        int[] viides = {0,0}
