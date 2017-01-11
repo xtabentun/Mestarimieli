@@ -14,11 +14,11 @@ Tuntikirjanpito</a>
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/site/checkstyle.html
 " title="Title">
-Checkstyle</a> 
+Checkstyle-raportti</a> 
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/pit/201701112000/index.html
 " title="Title">
-Pit</a> 
+Pit-raportti</a> 
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/mestariMieli/target/site/apidocs/index.html
 " title="Title">
