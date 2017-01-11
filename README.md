@@ -24,3 +24,6 @@ Pit</a>
 " title="Title">
 Javadoc</a> 
 
+- <a href="https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/kaeyttoeohjeet.md
+" title="Title">
+Käyttöohjeet</a>
