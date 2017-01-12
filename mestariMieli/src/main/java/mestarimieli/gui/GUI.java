@@ -8,6 +8,7 @@ package mestarimieli.gui;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.BorderFactory;
@@ -39,8 +40,6 @@ public class GUI implements Runnable {
     private final int stage;
     public boolean won;
 
-
-
     /**
      * Luokan konstruktori.
      *
@@ -50,10 +49,6 @@ public class GUI implements Runnable {
         stage = 0;
         won = false;
         number = new Number();
-
-
-
-        
 
     }
 
@@ -98,18 +93,20 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel("Type number: ");
+        question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField guess = new JTextField();
         JButton submit = new JButton("Submit");
-        JLabel hint = new JLabel("Gambatte!");
-        
+        submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+        JLabel hint = new JLabel("Ganbatte!");
+        hint.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
+
         JTextArea history = new JTextArea();
         history.setBackground(Color.WHITE);
-        
 
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(history);
-        gamefield.add(Box.createRigidArea(new Dimension(100,100)));
+        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(guess);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
@@ -126,8 +123,10 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel("Who are you?");
+        question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField name = new JTextField();
         JButton submit = new JButton("Submit");
+        submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
         submit.addActionListener(new NameListener(name, player, this));
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
@@ -149,9 +148,11 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel(player.getName() + ", how long will be your quest? ");
+        question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField length = new JTextField();
         gamefield.add(length);
         JButton submit = new JButton("Submit");
+        submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
         submit.addActionListener(new LengthListener(length, this, number));
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));

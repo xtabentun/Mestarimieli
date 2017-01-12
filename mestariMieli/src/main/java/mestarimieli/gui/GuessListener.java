@@ -6,6 +6,7 @@
 package mestarimieli.gui;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -68,11 +69,15 @@ class GuessListener implements ActionListener {
         int whites = retval[1];
         player.guessesGrow();
         if (blacks == number.getAnswerLength()) {
+
+            hint.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+
             hint.setText("You win teh game! Number of guesses " + player.getGuesses() + "\n");
             gui.won = true;
         } else {
             hint.setText(printHint(blacks, whites) + " " + number.getAnswer());
         }
+
     }
 
     /**
