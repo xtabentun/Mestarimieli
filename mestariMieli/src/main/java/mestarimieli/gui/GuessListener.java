@@ -32,8 +32,8 @@ class GuessListener implements ActionListener {
     private final Number number;
     private final Player player;
     private final JLabel hint;
-    private JTextArea history;
-    private ArrayList<String> userInput;
+    public JTextArea history;
+    
 
     /**
      * Luokan konstruktori.
@@ -51,7 +51,7 @@ class GuessListener implements ActionListener {
         this.player = player;
         this.hint = hint;
         this.history = history;
-        this.userInput = new ArrayList<>();
+        
 
 //        JTextField history = new JTextArea();
 //        history.setBackground(Color.WHITE);
@@ -60,8 +60,7 @@ class GuessListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        userInput.add(guess.getText());
-        history.setText(userInput.toString());
+        
         int[] retval = number.checkGuess(guess.getText());
         player.updateGuessCheckList(retval);
         player.updateGuessList(guess.getText());
@@ -73,10 +72,16 @@ class GuessListener implements ActionListener {
             hint.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
 
             hint.setText("You win teh game! Number of guesses " + player.getGuesses() + "\n");
+            
             gui.won = true;
         } else {
             hint.setText(printHint(blacks, whites) + " " + number.getAnswer());
+            
         }
+       gui.getFrame().revalidate();
+       gui.getFrame().pack();
+//        frame.revalidate();
+//        frame.pack();
 
     }
 
