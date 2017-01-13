@@ -6,8 +6,11 @@
 package mestarimieli.gui;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -34,7 +37,7 @@ public class GUI implements Runnable {
     public Number number;
     private final int stage;
     public boolean won;
-
+    private final List<String> userInputHistory;
     /**
      * Luokan konstruktori.
      *
@@ -44,17 +47,23 @@ public class GUI implements Runnable {
         stage = 0;
         won = false;
         number = new Number();
+         userInputHistory = new ArrayList<>();
     }
 
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
         frame.setPreferredSize(new Dimension(500, 500));
+        frame.setBackground(Color.black);     
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setContentPane(setPlayerName());
         frame.revalidate();
         frame.pack();
         frame.setVisible(true);
+        
+    
+        
+  
     }
 
     /**
@@ -81,12 +90,15 @@ public class GUI implements Runnable {
     public JPanel setGameArea() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.magenta, 5));
         gamefield.add(Box.createHorizontalGlue());
+        gamefield.setBackground(Color.black);
+        
         JLabel question = new JLabel("Type number: ");
         JTextField guess = new JTextField();
+        
         JButton submit = new JButton("Submit");
-        JLabel hint = new JLabel("Gambatte!");
+        JLabel hint = new JLabel("Ganbatte!");
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(guess);
@@ -100,12 +112,16 @@ public class GUI implements Runnable {
     }
 
     private JPanel setPlayerName() {
+        
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.magenta, 2));
         gamefield.add(Box.createHorizontalGlue());
         JLabel question = new JLabel("Who are you?");
+//        gamefield.setLayout(new GridLayout(1,  2));
+
         JTextField name = new JTextField();
+        name.setBackground(Color.black);
         JButton submit = new JButton("Submit");
         submit.addActionListener(new NameListener(name, player, this));
         gamefield.add(question);
@@ -125,8 +141,13 @@ public class GUI implements Runnable {
     public JPanel setNumber() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.darkGray, 2));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.magenta, 2));
         gamefield.add(Box.createHorizontalGlue());
+        gamefield.setBackground(Color.black);
+       
+  
+        JTextArea textbox = new JTextArea();
+        gamefield.setLayout(new GridLayout(2, 1));
         JLabel question = new JLabel(player.getName() + ", how long will be your quest? ");
         JTextField length = new JTextField();
         gamefield.add(length);
@@ -138,6 +159,7 @@ public class GUI implements Runnable {
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
+  
         return gamefield;
     }
 
@@ -151,6 +173,8 @@ public class GUI implements Runnable {
      */
     
     public JPanel historyArea() {
+        JTextField history = new JTextField();
+        
         JPanel everything = new JPanel();
         everything.setLayout(new BoxLayout(everything, BoxLayout.PAGE_AXIS));
         JLabel teksti = new JLabel("Pelin_kenttä");

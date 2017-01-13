@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
