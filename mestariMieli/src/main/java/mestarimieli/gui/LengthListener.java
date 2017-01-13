@@ -8,7 +8,6 @@ package mestarimieli.gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
-import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Number;
 
 /**
@@ -18,7 +17,7 @@ import mestarimieli.logiikka.Number;
 class LengthListener implements ActionListener {
 
     private final JTextField length;
-    private Number number;
+    private final Number number;
     private final GUI gui;
 
     /**

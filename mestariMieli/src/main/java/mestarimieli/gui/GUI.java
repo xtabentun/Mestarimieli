@@ -6,11 +6,7 @@
 package mestarimieli.gui;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Dimension;
-
-import java.awt.GridLayout;
-import java.util.List;
 
 import java.awt.Font;
 import java.util.ArrayList;
@@ -41,9 +37,9 @@ public class GUI implements Runnable {
     public Number number;
     private final int stage;
     public boolean won;
+    public String list;
 
     public ArrayList<String> userInput;
-
 
     /**
      * Luokan konstruktori.
@@ -55,28 +51,21 @@ public class GUI implements Runnable {
         won = false;
         number = new Number();
         this.userInput = player.getGuessList();
+        this.list = "empty";
     }
 
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
         frame.setPreferredSize(new Dimension(500, 500));
-        frame.setBackground(Color.black);     
+        frame.setBackground(Color.black);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        createComponents(frame.getContentPane());
+//        createComponents(frame.getContentPane());
 //        frame.setContentPane();
-//        frame.setContentPane(setPlayerName());
+        frame.setContentPane(setPlayerName());
         frame.revalidate();
         frame.pack();
         frame.setVisible(true);
-    }
-    
-    private void createComponents(Container container) {
-        BoxLayout layout = new BoxLayout(container, BoxLayout.LINE_AXIS);
-        container.setLayout(layout);
-        container.add(guessArea());
-        container.add(historyArea());      
-        container.add(setPlayerName());
     }
 
     /**
@@ -104,12 +93,62 @@ public class GUI implements Runnable {
      * @return metodi palauttaa JPanel gamefieldin.
      */
     public JPanel setGameArea() {
+        JPanel main = new JPanel();
+        main.setLayout(new BoxLayout(main, BoxLayout.LINE_AXIS));
+
+        JPanel gamefield = gameArea();
+
+        JPanel guessArea = guessArea1();
+
+        JPanel checkArea = checkArea();
+
+        main.add(gamefield);
+        main.add(guessArea);
+        main.add(checkArea);
+        main.revalidate();
+        return main;
+    }
+
+    private JPanel checkArea() {
+        //area3
+        JPanel historyArea = new JPanel();
+        historyArea.add(new JLabel("Check \nHistory"));
+        historyArea.setLayout(new BoxLayout(historyArea, BoxLayout.PAGE_AXIS));
+        historyArea.setPreferredSize(new Dimension(100, 500));
+        historyArea.add(Box.createRigidArea(new Dimension(100, 500)));
+        historyArea.setBackground(Color.black);
+        historyArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
+        return historyArea;
+    }
+
+    private JPanel guessArea1() {
+         JPanel guessArea = new JPanel();
+        guessArea.setLayout(new BoxLayout(guessArea, BoxLayout.PAGE_AXIS));
+        
+//         for (String i : userInput) {
+//            JLabel yx = new JLabel(i);
+//            guessArea.add(yx);
+////            guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
+//        }
+System.out.println(userInput.toString());
+            guessArea.add(new JLabel("vittu"));
+            guessArea.add(new JLabel(list));
+            
+//        guessArea.add(new JLabel("Guess \nHistory"));
+//        guessArea.add(Box.createRigidArea(new Dimension(100, 500)));
+//        guessArea.setBackground(Color.black);
+//        guessArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
+//        guessArea.setPreferredSize(new Dimension(100, 500));
+        return guessArea;
+    }
+
+    private JPanel gameArea() {
+        //area1
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 8));
-        gamefield.add(Box.createHorizontalGlue());
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
+        gamefield.add(Box.createVerticalGlue());
         gamefield.setBackground(Color.black);
-        
         JLabel question = new JLabel("Type number: ");
         question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField guess = new JTextField();
@@ -118,33 +157,25 @@ public class GUI implements Runnable {
         submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
         JLabel hint = new JLabel("Ganbatte!");
         hint.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
-
-        JTextArea history = new JTextArea();
-        history.setBackground(Color.WHITE); 
-//        createComponents(frame.getContentPane());
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-      
-//        gamefield.add(history);
-//        gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(guess);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(hint);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-        gamefield.add(guessArea());
-        submit.addActionListener(new GuessListener(guess, number, this, player, hint, history));
+        gamefield.add(guessArea1());
+        submit.addActionListener(new GuessListener(guess, number, this, player, hint));
         return gamefield;
     }
-    
-    public JPanel setPlayerName() {
-        
 
+    public JPanel setPlayerName() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.magenta, 2));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
         gamefield.add(Box.createHorizontalGlue());
+        gamefield.setBackground(Color.black);
         JLabel question = new JLabel("Who are you?");
 
         question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
@@ -171,13 +202,12 @@ public class GUI implements Runnable {
     public JPanel setNumber() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
-        gamefield.setBorder(BorderFactory.createLineBorder(Color.magenta, 2));
+        gamefield.setBorder(BorderFactory.createLineBorder(Color.green, 8));
         gamefield.add(Box.createHorizontalGlue());
         gamefield.setBackground(Color.black);
-       
-  
+
         JTextArea textbox = new JTextArea();
-        gamefield.setLayout(new GridLayout(2, 1));
+        gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         JLabel question = new JLabel(player.getName() + ", how long will be your quest? ");
         question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField length = new JTextField();
@@ -192,7 +222,7 @@ public class GUI implements Runnable {
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-  
+
         return gamefield;
     }
 
@@ -201,33 +231,6 @@ public class GUI implements Runnable {
     }
 
 
-    public JPanel guessArea() {
-       JPanel guessArea = new JPanel();
-        guessArea.setLayout(new BoxLayout(guessArea, BoxLayout.PAGE_AXIS));
-        
-        for ( String i : userInput) {
-            JLabel yx = new JLabel(i);
-           guessArea.add(yx);
-           guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
-            
-        }
-     
-//        userInput.add(guess.getText());
-//        history.setText(userInput.toString());
-        
-        return guessArea;
-    }
-
-    private JPanel historyArea() {
-                
-        JPanel historyArea = new JPanel();
-        historyArea.setLayout(new BoxLayout(historyArea, BoxLayout.PAGE_AXIS));
-        return historyArea;
-
-    }
-
-    
-    
     /**
      * Metodi tulee tuottamaan kentän, jossa käyttäjä näkee syötehistoriansa ja
      * voi arvioida koodia tämän perusteella.

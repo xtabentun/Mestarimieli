@@ -5,17 +5,12 @@
  */
 package mestarimieli.gui;
 
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
@@ -33,7 +28,7 @@ class GuessListener implements ActionListener {
     private final Number number;
     private final Player player;
     private final JLabel hint;
-    public JTextArea history;
+    private String list;
     
 
     /**
@@ -45,14 +40,13 @@ class GuessListener implements ActionListener {
      * @param player Player luokan parametri.
      * @param hint JLabel tyyppinen parametri.
      */
-    public GuessListener(JTextField guess, Number number, GUI gui, Player player, JLabel hint, JTextArea history) {
+    public GuessListener(JTextField guess, Number number, GUI gui, Player player, JLabel hint) {
         this.guess = guess;
         this.gui = gui;
         this.number = number;
         this.player = player;
         this.hint = hint;
-        this.history = history;
-        
+        this.list = gui.list;
 
 //        JTextField history = new JTextArea();
 //        history.setBackground(Color.WHITE);
@@ -61,10 +55,12 @@ class GuessListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+
         int[] retval = number.checkGuess(guess.getText());
         player.updateGuessCheckList(retval);
         player.updateGuessList(guess.getText());
+        System.out.println(player.getGuessList());
+
         int blacks = retval[0];
         int whites = retval[1];
         player.guessesGrow();
@@ -73,17 +69,17 @@ class GuessListener implements ActionListener {
             hint.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
 
             hint.setText("You win teh game! Number of guesses " + player.getGuesses() + "\n");
-            
+
             gui.won = true;
         } else {
             hint.setText(printHint(blacks, whites) + " " + number.getAnswer());
-            
+
         }
-       gui.getFrame().revalidate();
-       gui.getFrame().pack();
+        list = player.getGuessList().toString();
+        gui.getFrame().revalidate();
+        gui.getFrame().pack();
 //        frame.revalidate();
 //        frame.pack();
-
     }
 
     /**

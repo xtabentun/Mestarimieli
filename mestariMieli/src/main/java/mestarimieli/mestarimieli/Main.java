@@ -29,8 +29,8 @@ public class Main {
         GUI g = new GUI();
         SwingUtilities.invokeLater(g);
             
-        UI m = new UI();
-        m.run();
+//        UI m = new UI();
+//        m.run();
     }
     
     //tänne {while(1);}
