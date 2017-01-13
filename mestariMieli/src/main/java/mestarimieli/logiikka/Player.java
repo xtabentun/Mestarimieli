@@ -17,7 +17,7 @@ public class Player {
 
     private String name;
     private int guesses;
-    private final List<String> guessList = new ArrayList();
+    private final ArrayList<String> guessList = new ArrayList();
 
     private final List<int[]> guessCheckList = new ArrayList();
 
@@ -58,7 +58,7 @@ public class Player {
         guessCheckList.add(guessCheck);
     }
     
-    public List<String> getGuessList() {
+    public ArrayList<String> getGuessList() {
         return guessList;
     }
 
