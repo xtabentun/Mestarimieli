@@ -38,7 +38,7 @@ public class GUI implements Runnable {
     private final int stage;
     public boolean won;
     public String list;
-
+    public GuessArea1 guessArea;
     public ArrayList<String> userInput;
 
     /**
@@ -52,6 +52,7 @@ public class GUI implements Runnable {
         number = new Number();
         this.userInput = player.getGuessList();
         this.list = "empty";
+        this.guessArea = new GuessArea1(player);
     }
 
     @Override
@@ -98,10 +99,10 @@ public class GUI implements Runnable {
 
         JPanel gamefield = gameArea();
 
-        JPanel guessArea = guessArea1();
+        
 
         JPanel checkArea = checkArea();
-
+       
         main.add(gamefield);
         main.add(guessArea);
         main.add(checkArea);
@@ -121,26 +122,26 @@ public class GUI implements Runnable {
         return historyArea;
     }
 
-    private JPanel guessArea1() {
-         JPanel guessArea = new JPanel();
-        guessArea.setLayout(new BoxLayout(guessArea, BoxLayout.PAGE_AXIS));
-        
-//         for (String i : userInput) {
-//            JLabel yx = new JLabel(i);
-//            guessArea.add(yx);
-////            guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
-//        }
-System.out.println(userInput.toString());
-            guessArea.add(new JLabel("vittu"));
-            guessArea.add(new JLabel(list));
-            
-//        guessArea.add(new JLabel("Guess \nHistory"));
-//        guessArea.add(Box.createRigidArea(new Dimension(100, 500)));
-//        guessArea.setBackground(Color.black);
-//        guessArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
-//        guessArea.setPreferredSize(new Dimension(100, 500));
-        return guessArea;
-    }
+//    private JPanel guessArea1() {
+//         JPanel guessArea = new JPanel();
+//        guessArea.setLayout(new BoxLayout(guessArea, BoxLayout.PAGE_AXIS));
+//        
+////         for (String i : userInput) {
+////            JLabel yx = new JLabel(i);
+////            guessArea.add(yx);
+//////            guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
+////        }
+//System.out.println(userInput.toString());
+//            guessArea.add(new JLabel("vittu"));
+//            guessArea.add(new JLabel(list));
+//            
+////        guessArea.add(new JLabel("Guess \nHistory"));
+////        guessArea.add(Box.createRigidArea(new Dimension(100, 500)));
+////        guessArea.setBackground(Color.black);
+////        guessArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
+////        guessArea.setPreferredSize(new Dimension(100, 500));
+//        return guessArea;
+//    }
 
     private JPanel gameArea() {
         //area1
@@ -165,7 +166,6 @@ System.out.println(userInput.toString());
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(hint);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-        gamefield.add(guessArea1());
         submit.addActionListener(new GuessListener(guess, number, this, player, hint));
         return gamefield;
     }

@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import mestarimieli.logiikka.Number;
@@ -29,6 +30,7 @@ class GuessListener implements ActionListener {
     private final Player player;
     private final JLabel hint;
     private String list;
+    public GuessArea1 guessArea;
     
 
     /**
@@ -47,6 +49,7 @@ class GuessListener implements ActionListener {
         this.player = player;
         this.hint = hint;
         this.list = gui.list;
+        this.guessArea = gui.guessArea;
 
 //        JTextField history = new JTextArea();
 //        history.setBackground(Color.WHITE);
@@ -75,9 +78,11 @@ class GuessListener implements ActionListener {
             hint.setText(printHint(blacks, whites) + " " + number.getAnswer());
 
         }
-        list = player.getGuessList().toString();
-        gui.getFrame().revalidate();
-        gui.getFrame().pack();
+        
+        gui.guessArea.addLabels(player);
+//        list = player.getGuessList().toString();
+//        gui.getFrame().revalidate();
+//        gui.getFrame().pack();
 //        frame.revalidate();
 //        frame.pack();
     }
