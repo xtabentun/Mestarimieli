@@ -30,6 +30,7 @@ public class LengthListener implements ActionListener {
      * @param length JTextField tyyppinen parametri.
      * @param gui GUI luokan parametri.
      * @param number Number luokan parametri.
+     * @param hint JLabel tyyppinen parametri, josta on apua X ja O vihjeiden tulostamisessa ja optimoimisessa.
      */
     public LengthListener(JTextField length, GUI gui, Number number, JLabel hint) {
         this.length = length;

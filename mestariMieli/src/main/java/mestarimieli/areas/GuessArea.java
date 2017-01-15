@@ -27,7 +27,7 @@ public class GuessArea extends JPanel {
 
     /** 
      * Metodi poistaa käyttäjän syötteet syötehistoriasta ennenkuin lisää uuden JLabelin jokaista arvaushistorian alkiota varten.
-     * @param player 
+     * @param player luokan Player parametri, jonka avulla saadaan getGuessList.
      */
     
     public void addLabels(Player player) {
