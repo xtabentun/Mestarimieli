@@ -1,10 +1,12 @@
-mestarimieli/gui/NameListener.class
+mestarimieli/listeners/NameListener.class
 ui/UI$1.class
-mestarimieli/gui/GuessArea1.class
 mestarimieli/gui/GUI.class
+mestarimieli/listeners/GuessListener.class
 mestarimieli/logiikka/Player.class
 mestarimieli/mestarimieli/Main.class
-mestarimieli/gui/GuessListener.class
-mestarimieli/gui/LengthListener.class
+mestarimieli/listeners/LengthListener.class
+mestarimieli/listeners/NewGameListener.class
 mestarimieli/logiikka/Number.class
+mestarimieli/areas/GuessArea.class
+mestarimieli/listeners/EndGameListener.class
 ui/UI.class
