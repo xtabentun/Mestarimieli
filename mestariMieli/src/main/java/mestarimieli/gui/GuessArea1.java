@@ -17,21 +17,21 @@ import mestarimieli.logiikka.Player;
 class GuessArea1 extends JPanel {
 
     public GuessArea1(Player player) {
-
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-
         addLabels(player);
         add(new JLabel(" "));
-//        guessArea.add(new JLabel(list));
-
     }
 
+    /** 
+     * Metodi poistaa käyttäjän syötteet syötehistoriasta ennenkuin lisää uuden JLabelin jokaista arvaushistorian alkiota varten.
+     * @param player 
+     */
+    
     public void addLabels(Player player) {
         this.removeAll();
         for (String i : player.getGuessList()) {
             JLabel yx = new JLabel(i);
             add(yx);
-//            guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
         }
     }
 
