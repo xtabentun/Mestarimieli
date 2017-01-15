@@ -53,6 +53,9 @@ public class GuessListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (Integer.parseInt(guess.getText()) != number.getAnswerLength()) {
+            hint.setText("That's not a right length! Give the exact amount of numbers, please.");
+        }
         int[] retval = number.checkGuess(guess.getText());
 
         player.updateGuessCheckList(retval);
