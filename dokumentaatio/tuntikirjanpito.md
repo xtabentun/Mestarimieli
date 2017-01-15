@@ -13,4 +13,5 @@ Päivä | Tunnit | Kuvaus
 10.01.2017 | 12.0h| GUIn kanssa työskentelyä, layouttien kokeilemista, luokkien luontia
 11.01.2017 | 10.5h| GUIn saaminen stabiiliin tilaan, uusia luokkia, riippuvuuksia, konstruktorien muokkaamista, javadoc, pit, checkstyle, käyttöohjeet, rakennekuvaus, ajettavan .jar tiedoston luonti
 13.01.2017 | 2.0h | .jar'n päivitystä, liian suuren numerokoodin syötteen korjaus
-15.01.2017 | 3.0h | Menubar, väriensäätöä, dokumenttien päivitys
+15.01.2017 | 3.0h | Menubar, väriensäätöä, dokumenttien päivitys, vääränkokoisen numerosyötteen huomioiminen
+
