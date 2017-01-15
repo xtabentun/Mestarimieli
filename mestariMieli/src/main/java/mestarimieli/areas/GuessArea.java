@@ -14,12 +14,12 @@ import mestarimieli.logiikka.Player;
  *
  * @author lea
  */
-public class GuessArea1 extends JPanel {
+public class GuessArea extends JPanel {
 /**
  * Luokan konstruktori
  * @param player ottaa parametrikseen PLayer luokan playerin.
  */
-    public GuessArea1(Player player) {
+    public GuessArea(Player player) {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         addLabels(player);
         add(new JLabel(" "));

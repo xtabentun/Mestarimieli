@@ -5,7 +5,7 @@
  */
 package mestarimieli.gui;
 
-import mestarimieli.areas.GuessArea1;
+import mestarimieli.areas.GuessArea;
 import mestarimieli.listeners.GuessListener;
 import mestarimieli.listeners.LengthListener;
 import mestarimieli.listeners.NameListener;
@@ -40,7 +40,7 @@ public class GUI implements Runnable {
     private final int stage;
     public boolean won;
     public String list;
-    public GuessArea1 guessArea;
+    public GuessArea guessArea;
     public ArrayList<String> userInput;
     /**
      * Luokan konstruktori.
@@ -52,7 +52,7 @@ public class GUI implements Runnable {
         number = new Number();
         this.userInput = player.getGuessList();
         this.list = "empty";
-        this.guessArea = new GuessArea1(player);
+        this.guessArea = new GuessArea(player);
     }
     
     @Override

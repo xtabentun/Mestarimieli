@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import mestarimieli.gui.GUI;
-import mestarimieli.areas.GuessArea1;
+import mestarimieli.areas.GuessArea;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
@@ -30,7 +30,7 @@ public class GuessListener implements ActionListener {
     private final Player player;
     private final JLabel hint;
     private final String list;
-    public GuessArea1 guessArea;
+    public GuessArea guessArea;
 
     /**
      * Luokan konstruktori.
