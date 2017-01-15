@@ -5,6 +5,8 @@
  */
 package mestarimieli.gui;
 
+import mestarimieli.listeners.NewGameListener;
+import mestarimieli.listeners.EndGameListener;
 import mestarimieli.areas.GuessArea;
 import mestarimieli.listeners.GuessListener;
 import mestarimieli.listeners.LengthListener;
@@ -35,7 +37,7 @@ import mestarimieli.logiikka.Number;
  */
 public class GUI implements Runnable {
 
-    static JFrame frame;
+    public static JFrame frame;
     private final Player player;
     public Number number;
     private final int stage;

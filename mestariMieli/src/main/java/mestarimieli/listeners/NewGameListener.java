@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.gui;
+package mestarimieli.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import mestarimieli.gui.GUI;
+import mestarimieli.mestarimieli.Main;
 
 /**
  *
  * @author lea
  */
-class EndGameListener implements ActionListener {
+public class NewGameListener implements ActionListener {
 
-    public EndGameListener() {
+    public NewGameListener() {
     }
     
-     @Override
-    public void actionPerformed(ActionEvent e) {
+    @Override
+    public void actionPerformed(ActionEvent e) {    
+        Main.start();
         GUI.frame.dispose();
 }
     
