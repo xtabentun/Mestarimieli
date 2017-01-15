@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.gui;
+package mestarimieli.listeners;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import mestarimieli.gui.GUI;
+import mestarimieli.areas.GuessArea1;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
 
@@ -20,7 +22,7 @@ import mestarimieli.logiikka.Player;
  *
  * @author lea
  */
-class GuessListener implements ActionListener {
+public class GuessListener implements ActionListener {
 
     private final JTextField guess;
     private final GUI gui;

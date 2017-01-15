@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.gui;
+package mestarimieli.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import mestarimieli.gui.GUI;
 import mestarimieli.gui.GUI;
 import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Player;
@@ -17,7 +18,7 @@ import mestarimieli.logiikka.Player;
  * Luokka implementoi Actionlistener:n.
  * @author lea
  */
-class NameListener implements ActionListener {
+public class NameListener implements ActionListener {
     public final JTextField name;
     public final Player player;
     public  JPanel gamefield;

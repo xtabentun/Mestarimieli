@@ -5,6 +5,10 @@
  */
 package mestarimieli.gui;
 
+import mestarimieli.areas.GuessArea1;
+import mestarimieli.listeners.GuessListener;
+import mestarimieli.listeners.LengthListener;
+import mestarimieli.listeners.NameListener;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;

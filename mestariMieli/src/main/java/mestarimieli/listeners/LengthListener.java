@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.gui;
+package mestarimieli.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Number;
 
 /**
@@ -16,7 +17,7 @@ import mestarimieli.logiikka.Number;
  *
  * @author lea
  */
-class LengthListener implements ActionListener {
+public class LengthListener implements ActionListener {
 
     private final JTextField length;
     private final Number number;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mestarimieli.gui;
+package mestarimieli.areas;
 
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -14,7 +14,7 @@ import mestarimieli.logiikka.Player;
  *
  * @author lea
  */
-class GuessArea1 extends JPanel {
+public class GuessArea1 extends JPanel {
 /**
  * Luokan konstruktori
  * @param player ottaa parametrikseen PLayer luokan playerin.
