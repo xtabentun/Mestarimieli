@@ -41,11 +41,11 @@ Käytännössä tulevaa peliä kuvaavat seuraavat suuntaviivat:
 
 ### Luokkakaavio 
 
-![Alt text](https://yuml.me/8de15d82)
+![Alt text](https://yuml.me/5479563c)
 
 ### Sekvenssikaaviot
 
- - Käyttötapaus: Käyttäjä syöttää väärän ja sen jälkeen oikean pituisen koodin.  Käyttöliittymä käynnistyy ja tarkistaa Number-luokalta käyttäjän antaman koodin pituutta.  <br/>
+ - Käyttötapaus : Käyttäjä syöttää väärän ja sitten oikean pituisen koodin.  Käyttöliittymä käynnistyy ja tarkistaa Number-luokalta käyttäjän antaman koodin pituutta.  <br/>
 Käyttäjän syöttäessä väärän pituisen koodin, palauttaa Number-luokka falsen ja käyttäjälle tulostuu "Wrong Length". Käyttäjän arvatessa uudelleen pituutta Käyttöliittymä varmistaa Number-luokalta pituuden ja tämän ollessa sama, palautuu true. 
 
 ![Alt text](SequenceDiagram667.png)
