@@ -18,7 +18,7 @@ Checkstyle</a>
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/pit/201701152108/index.html
 " title="Title">
-Pit-raportti</a> 
+Pit</a> 
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/mestariMieli/target/site/apidocs/index.html
 " title="Title">
