@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import mestarimieli.gui.GUI;
+import mestarimieli.gui.GUI;
 import mestarimieli.logiikka.Player;
 
 /**
@@ -17,9 +18,9 @@ import mestarimieli.logiikka.Player;
  * @author lea
  */
 class NameListener implements ActionListener {
-    private final JTextField name;
-    private final Player player;
-    JPanel gamefield;
+    public final JTextField name;
+    public final Player player;
+   public  JPanel gamefield;
     GUI frame;
 
     /**

@@ -18,7 +18,6 @@ public class Player {
     private String name;
     private int guesses;
     private final ArrayList<String> guessList = new ArrayList();
-
     private final List<int[]> guessCheckList = new ArrayList();
 
     /**
@@ -66,10 +65,6 @@ public class Player {
         return guesses;
     }
 
-//    public void setGuesses(int guesses) {
-//        this.guesses = guesses;
-//        
-//    }
     /**
      * Metodi kasvattaa arvausten määrää yhdellä.
      */
@@ -85,7 +80,4 @@ public class Player {
         this.name = name;
     }
 
-//    public void setName(String name) {
-//        this.name = name;
-//    }
 }

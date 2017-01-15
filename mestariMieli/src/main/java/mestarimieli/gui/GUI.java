@@ -16,6 +16,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -58,12 +59,11 @@ public class GUI implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
-        frame.setPreferredSize(new Dimension(500, 500));
+        frame.setPreferredSize(new Dimension(600, 600));
         frame.setBackground(Color.black);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//        createComponents(frame.getContentPane());
-//        frame.setContentPane();
         frame.setContentPane(setPlayerName());
+        frame.setJMenuBar(menuBar());
         frame.revalidate();
         frame.pack();
         frame.setVisible(true);
@@ -82,7 +82,11 @@ public class GUI implements Runnable {
     }
 
     private JMenuBar menuBar() {
-        JMenuBar menuBar = null;
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenu editMenu = new JMenu("Edit");
+        final JMenu aboutMenu = new JMenu("About");
+        final JMenu linkMenu = new JMenu("Links");
         return menuBar;
     }
 
@@ -96,13 +100,8 @@ public class GUI implements Runnable {
     public JPanel setGameArea() {
         JPanel main = new JPanel();
         main.setLayout(new BoxLayout(main, BoxLayout.LINE_AXIS));
-
         JPanel gamefield = gameArea();
-
-        
-
         JPanel checkArea = checkArea();
-       
         main.add(gamefield);
         main.add(guessArea);
         main.add(checkArea);
@@ -111,40 +110,17 @@ public class GUI implements Runnable {
     }
 
     private JPanel checkArea() {
-        //area3
         JPanel historyArea = new JPanel();
         historyArea.add(new JLabel("Check \nHistory"));
         historyArea.setLayout(new BoxLayout(historyArea, BoxLayout.PAGE_AXIS));
-        historyArea.setPreferredSize(new Dimension(100, 500));
-        historyArea.add(Box.createRigidArea(new Dimension(100, 500)));
+        historyArea.setPreferredSize(new Dimension(100, 600));
+        historyArea.add(Box.createRigidArea(new Dimension(100, 600)));
         historyArea.setBackground(Color.black);
         historyArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
         return historyArea;
     }
 
-//    private JPanel guessArea1() {
-//         JPanel guessArea = new JPanel();
-//        guessArea.setLayout(new BoxLayout(guessArea, BoxLayout.PAGE_AXIS));
-//        
-////         for (String i : userInput) {
-////            JLabel yx = new JLabel(i);
-////            guessArea.add(yx);
-//////            guessArea.add(Box.createRigidArea(new Dimension(100, 100)));
-////        }
-//System.out.println(userInput.toString());
-//            guessArea.add(new JLabel("vittu"));
-//            guessArea.add(new JLabel(list));
-//            
-////        guessArea.add(new JLabel("Guess \nHistory"));
-////        guessArea.add(Box.createRigidArea(new Dimension(100, 500)));
-////        guessArea.setBackground(Color.black);
-////        guessArea.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
-////        guessArea.setPreferredSize(new Dimension(100, 500));
-//        return guessArea;
-//    }
-
     private JPanel gameArea() {
-        //area1
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         gamefield.setBorder(BorderFactory.createLineBorder(Color.GREEN, 8));
@@ -170,6 +146,12 @@ public class GUI implements Runnable {
         return gamefield;
     }
 
+    /**
+     * Metodi tuottaa ensimmäisen kentän peliin elementteineen. Siinä kysytään
+     * pelaajan nimeä.
+     *
+     * @return Metodi palauttaa gamefieldin.
+     */
     public JPanel setPlayerName() {
         JPanel gamefield = new JPanel();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
@@ -177,11 +159,9 @@ public class GUI implements Runnable {
         gamefield.add(Box.createHorizontalGlue());
         gamefield.setBackground(Color.black);
         JLabel question = new JLabel("Who are you?");
-
         question.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
         JTextField name = new JTextField();
         name.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-
         JButton submit = new JButton("Submit");
         submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
         submit.addActionListener(new NameListener(name, player, this));
@@ -205,7 +185,6 @@ public class GUI implements Runnable {
         gamefield.setBorder(BorderFactory.createLineBorder(Color.green, 8));
         gamefield.add(Box.createHorizontalGlue());
         gamefield.setBackground(Color.black);
-
         JTextArea textbox = new JTextArea();
         gamefield.setLayout(new BoxLayout(gamefield, BoxLayout.PAGE_AXIS));
         JLabel question = new JLabel(player.getName() + ", how long will be your quest? ");
@@ -214,37 +193,20 @@ public class GUI implements Runnable {
         length.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
         gamefield.add(length);
         JButton submit = new JButton("Submit");
+        JLabel hint = new JLabel();
         submit.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
-        submit.addActionListener(new LengthListener(length, this, number));
+        submit.addActionListener(new LengthListener(length, this, number, hint));
         gamefield.add(question);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         gamefield.add(length);
         gamefield.add(Box.createRigidArea(new Dimension(100, 20)));
         gamefield.add(submit);
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
-
+        gamefield.add(hint);
         return gamefield;
     }
 
     public JFrame getFrame() {
         return frame;
     }
-
-
-    /**
-     * Metodi tulee tuottamaan kentän, jossa käyttäjä näkee syötehistoriansa ja
-     * voi arvioida koodia tämän perusteella.
-     *
-     * @return palauttaa JPanel everythingin.
-     */
-//    public JPanel historyArea() {
-//        JPanel everything = new JPanel();
-//        everything.setLayout(new BoxLayout(everything, BoxLayout.PAGE_AXIS));
-//        JLabel teksti = new JLabel("Pelin_kenttä");
-//        JButton nappi = new JButton("Click!");
-//        JTextArea textAreaVasen = new JTextArea("Le Kopioija");
-//        everything.add(teksti);
-//        everything.add(nappi);
-//        return everything;
-//    }
 }

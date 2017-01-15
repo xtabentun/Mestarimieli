@@ -21,7 +21,7 @@ class GuessArea1 extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
         addLabels(player);
-        add(new JLabel("vittu"));
+        add(new JLabel(" "));
 //        guessArea.add(new JLabel(list));
 
     }

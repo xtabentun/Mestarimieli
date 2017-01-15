@@ -9,8 +9,6 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import mestarimieli.logiikka.Number;
 import mestarimieli.logiikka.Player;
@@ -29,9 +27,8 @@ class GuessListener implements ActionListener {
     private final Number number;
     private final Player player;
     private final JLabel hint;
-    private String list;
+    private final String list;
     public GuessArea1 guessArea;
-    
 
     /**
      * Luokan konstruktori.
@@ -49,17 +46,13 @@ class GuessListener implements ActionListener {
         this.player = player;
         this.hint = hint;
         this.list = gui.list;
-        this.guessArea = gui.guessArea;
-
-//        JTextField history = new JTextArea();
-//        history.setBackground(Color.WHITE);
-//        
+        this.guessArea = gui.guessArea;   
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         int[] retval = number.checkGuess(guess.getText());
+
         player.updateGuessCheckList(retval);
         player.updateGuessList(guess.getText());
         System.out.println(player.getGuessList());
@@ -68,23 +61,13 @@ class GuessListener implements ActionListener {
         int whites = retval[1];
         player.guessesGrow();
         if (blacks == number.getAnswerLength()) {
-
             hint.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-
             hint.setText("You win teh game! Number of guesses " + player.getGuesses() + "\n");
-
             gui.won = true;
         } else {
-            hint.setText(printHint(blacks, whites) + " " + number.getAnswer());
-
+            hint.setText(printHint(blacks, whites));
         }
-        
         gui.guessArea.addLabels(player);
-//        list = player.getGuessList().toString();
-//        gui.getFrame().revalidate();
-//        gui.getFrame().pack();
-//        frame.revalidate();
-//        frame.pack();
     }
 
     /**
