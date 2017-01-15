@@ -14,4 +14,4 @@
 
 - Syötehistoriasi näkyy oikealla valkoisessa palkissa laskevassa järjestyksessä.
 
-
+- voit halutessasi aloittaa joko uuden pelin tai sulkea pelin menubar:ista.
