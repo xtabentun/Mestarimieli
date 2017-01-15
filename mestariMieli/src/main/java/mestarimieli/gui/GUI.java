@@ -21,6 +21,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -34,7 +35,7 @@ import mestarimieli.logiikka.Number;
  */
 public class GUI implements Runnable {
 
-    private JFrame frame;
+    static JFrame frame;
     private final Player player;
     public Number number;
     private final int stage;
@@ -80,11 +81,19 @@ public class GUI implements Runnable {
 
     private JMenuBar menuBar() {
         JMenuBar menuBar = new JMenuBar();
-        JMenu fileMenu = new JMenu("File");
-        JMenu editMenu = new JMenu("Edit");
-        final JMenu aboutMenu = new JMenu("About");
-        final JMenu linkMenu = new JMenu("Links");
-        return menuBar;
+
+        JMenu actions = new JMenu("Action");
+        menuBar.add(actions);
+
+        JMenuItem newGame = new JMenuItem("New game");
+        newGame.addActionListener(new NewGameListener());
+        JMenuItem exitGame = new JMenuItem("Exit game");
+        exitGame.addActionListener(new EndGameListener());
+
+        actions.add(newGame);
+        actions.add(exitGame);
+
+return menuBar;
     }
     /**
      * Metodi luo uuden gamefield JPanelin, jolle asetetaan tietyt mitat ja

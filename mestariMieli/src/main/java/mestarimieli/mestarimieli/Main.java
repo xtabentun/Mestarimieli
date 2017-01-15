@@ -13,26 +13,30 @@ import javax.swing.SwingUtilities;
 nelikirjaimisen jonon, joka muodostuu numeroista 123456789, 0 ei ole käytössä. Koodipalloja ovat tässä siis numerot 1-9 ja avainpalloja mustat ja valkoiset: e.g. blacks ja whites. 
 
  */
-/** Luokka mahdollistaa Mestarimieli-luokan toiminnan run metodin kautta.
+/**
+ * Luokka mahdollistaa Mestarimieli-luokan toiminnan run metodin kautta.
  *
  * @author lzkosone
  */
 public class Main {
-    
-    /** metodi luo uuden m-nimisen Mestarimielen, jonka metodi pistää "pyörimään".
-     * 
-     * @param args tyypillinen String muotoinen parametri kyseiselle staattiselle metodille.
+
+    /**
+     * metodi luo uuden m-nimisen Mestarimielen, jonka metodi pistää
+     * "pyörimään".
+     *
+     * @param args tyypillinen String muotoinen parametri kyseiselle
+     * staattiselle metodille.
      * @throws Exception Mahdollistaa toiminnan.
      */
-    
     public static void main(String[] args) throws Exception {
-        GUI g = new GUI();
-        SwingUtilities.invokeLater(g);
-            
-//        UI m = new UI();
-//        m.run();
+        start();
+
     }
-    
-    //tänne {while(1);}
-    
+
+    public static void start() {
+        SwingUtilities.invokeLater(new GUI());
+    }
+
+//       GUI g = new GUI();
+//        SwingUtilities.invokeLater(g);
 }
