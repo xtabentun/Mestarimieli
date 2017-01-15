@@ -7,7 +7,6 @@ package mestarimieli.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
 import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.BorderFactory;
@@ -24,11 +23,9 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import mestarimieli.logiikka.Player;
 import mestarimieli.logiikka.Number;
-
 /**
  * Graafinen käyttöliittymä joka luo uuden ikkunan peliä varten. Käyttäjä voi
  * näin pelata graafisessa ikkunassa.
- *
  * @author lzkosone
  */
 public class GUI implements Runnable {
@@ -41,10 +38,8 @@ public class GUI implements Runnable {
     public String list;
     public GuessArea1 guessArea;
     public ArrayList<String> userInput;
-
     /**
      * Luokan konstruktori.
-     *
      */
     public GUI() {
         player = new Player();
@@ -55,7 +50,7 @@ public class GUI implements Runnable {
         this.list = "empty";
         this.guessArea = new GuessArea1(player);
     }
-
+    
     @Override
     public void run() {
         frame = new JFrame("Mestarimieli-peli");
@@ -68,11 +63,9 @@ public class GUI implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-
     /**
      * Metodilla voi asettaa mikä paneeli näkyy käyttäjälle instanssin
      * ulkopuolelta.
-     *
      * @param p parametripaneeli.
      */
     public void setNewPane(JPanel p) {
@@ -89,7 +82,6 @@ public class GUI implements Runnable {
         final JMenu linkMenu = new JMenu("Links");
         return menuBar;
     }
-
     /**
      * Metodi luo uuden gamefield JPanelin, jolle asetetaan tietyt mitat ja
      * johon asetetaan komponentteja, kuten nappeja ja tekstikenttää. Pelaaja
@@ -145,11 +137,9 @@ public class GUI implements Runnable {
         submit.addActionListener(new GuessListener(guess, number, this, player, hint));
         return gamefield;
     }
-
     /**
      * Metodi tuottaa ensimmäisen kentän peliin elementteineen. Siinä kysytään
      * pelaajan nimeä.
-     *
      * @return Metodi palauttaa gamefieldin.
      */
     public JPanel setPlayerName() {
@@ -173,10 +163,8 @@ public class GUI implements Runnable {
         gamefield.add(Box.createRigidArea(new Dimension(100, 100)));
         return gamefield;
     }
-
     /**
      * Metodi luo JPanel-näkymän käyttäjälle, jossa kysytään koodin pituutta.
-     *
      * @return palauttaa gamefieldin.
      */
     public JPanel setNumber() {
@@ -205,7 +193,6 @@ public class GUI implements Runnable {
         gamefield.add(hint);
         return gamefield;
     }
-
     public JFrame getFrame() {
         return frame;
     }

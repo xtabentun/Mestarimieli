@@ -20,7 +20,7 @@ import mestarimieli.logiikka.Player;
 class NameListener implements ActionListener {
     public final JTextField name;
     public final Player player;
-   public  JPanel gamefield;
+    public  JPanel gamefield;
     GUI frame;
 
     /**
