@@ -14,7 +14,7 @@ Tuntikirjanpito</a>
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/site/checkstyle.html
 " title="Title">
-Checkstyle-raportti</a> 
+Checkstyle</a> 
 
 - <a href="https://htmlpreview.github.io/?https://github.com/xtabentun/Mestarimieli/blob/master/dokumentaatio/pit/201701152108/index.html
 " title="Title">
